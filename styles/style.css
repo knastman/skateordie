@@ -1,0 +1,35 @@
+/************************************
+  Change fonts, colors etc  when decided
+************************************/
+:root {
+  --mainFont:"Open Sans", sans-serif;
+  --mainColor: #000;
+  --mainTextColor:#000; 
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 14px;
+  font-family: var(--mainFont);
+  color:var(--mainTextColor);
+}
+
+img{
+  max-width:100%;
+}
+
+#hero {
+  background-image: url(../images/hero.jpg);
+}
+
+/**** TYPOGRAPY ****/
+
+h1, h2, h3, h4, h5, h6{
+	font-size: 1em;
+}
+
