@@ -1,6 +1,7 @@
-# Skate or Die - Projekt i kursen "Agil Projektledning"
+# Skate or Die - Template 
+### Projekt i kursen "Agil Projektledning"
 
-## Grupparbete - Medlemmar
+#### Grupparbete - Medlemmar
 - Petra Hastman
 - Andréa Jandergren
 - Amanda Andersson
