@@ -1,13 +1,12 @@
 # Skate or Die - Projekt i kursen "Agil Projektledning"
 
 ## Grupparbete - Medlemmar
-Petra Hastman
-Andréa Jandergren
-Amanda Andersson
-Elvira Ericsson
-Melinda Sowole
-Jesper Andersson
-
+- Petra Hastman
+- Andréa Jandergren
+- Amanda Andersson
+- Elvira Ericsson
+- Melinda Sowole
+- Jesper Andersson
 
 ---
 
