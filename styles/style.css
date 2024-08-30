@@ -19,7 +19,7 @@ html {
   color:var(--mainTextColor);
 }
 
-img{
+img {
   max-width:100%;
 }
 
@@ -29,7 +29,29 @@ img{
 
 /**** TYPOGRAPY ****/
 
-h1, h2, h3, h4, h5, h6{
+h1, h2, h3, h4, h5, h6 {
 	font-size: 1em;
 }
 
+p {
+  margin-bottom:15px;
+}
+p:nth-last-child(1){
+  margin-bottom:0;
+}
+
+
+/**** Navigation ****/
+
+/* nav {
+
+} */
+
+
+/********************* MEDIA QUERIES ************* MEDIA QUERIES *************/
+
+
+/* Desktop Styles */
+/* @media only screen and (min-width: 1000px) and (max-width: 10000px) {
+
+}  */
