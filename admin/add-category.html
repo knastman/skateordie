@@ -14,8 +14,27 @@
 
   <h1>Add Category</h1>
 
-  <form action=""></form>
+  <form action="">
+    <div>
+      <label for="name">Category Name</label>
+      <input type="text" id="name" name="name">
+    </div>
 
+    <div>
+      <label for="parent_id">Parent Category</label>
+      <select name="parent_id" id="parent_id">
+        <option value="null">Top level category</option>
+        // TODO: add category options
+        ex:
+        <option value="1">men</option>
+        <option value="2">men/clothing</option>
+        <option value="3">men/clothing/denim</option>
+        <option value="4">men/clothing/t-shirts</option>
+      </select>
+    </div>
+
+    <button type="submit" id="add_category">Add Category</button>
+  </form>
   
 </body>
 </html>
