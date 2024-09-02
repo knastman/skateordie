@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link href="styles/styles.css" rel="stylesheet" />
-  <script type="module" src="admin_script.js"></script>
+  <script type="module" src="../js/admin_script.js"></script>
 
   <!--Google fonts-->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -14,8 +14,21 @@
 
   <h1>Add Category</h1>
 
-  <form action=""></form>
+  <form action="">
+    <div>
+      <label for="name">Category Name</label>
+      <input type="text" id="name" name="name">
+    </div>
 
+    <div>
+      <label for="parent_id">Parent Category</label>
+      <select name="parent_id" id="parent_id">
+        <option value="null">Top level category</option>
+      </select>
+    </div>
+
+    <button type="submit" id="add_category">Add Category</button>
+  </form>
   
 </body>
 </html>
