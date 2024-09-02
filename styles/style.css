@@ -2,7 +2,7 @@
   Change fonts, colors etc  when decided
 ************************************/
 :root {
-  --mainFont:"Open Sans", sans-serif;
+  --mainFont:"Open Sans", system-ui, sans-serif;
   --mainColor: #000;
   --mainTextColor:#000; 
 }
