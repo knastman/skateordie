@@ -35,6 +35,23 @@ function getCatNameFromId(id) {
 
 // get all categories with subcats nested
 function getCats() {
+  const categories = getNestedCats();
+
+  const topLevelCats = categories.filter((cat) => cat.parent_id == null);
+
+  return topLevelCats;
+}
+
+// all bottom level cats that store products
+function getProductCats() {
+  const categories = getNestedCats();
+
+  const bottomLevelCats = categories.filter(cat => cat.subcats.length == 0);
+  
+  return bottomLevelCats
+}
+
+function getNestedCats() {
   // code from chatGPT
   const categories = categoriesDB;
   const catMap = {};
@@ -51,10 +68,7 @@ function getCats() {
       catMap[category.parent_id].subcats.push(category);
     }
   });
-
-  const topLevelCats = categories.filter((cat) => cat.parent_id == null);
-
-  return topLevelCats;
+  
 }
 
 // FOR PROGRAMMER CONVENIENCE
