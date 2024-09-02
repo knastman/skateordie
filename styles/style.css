@@ -1,6 +1,9 @@
 /************************************
   Change fonts, colors etc  when decided
 ************************************/
+
+@import "slider.css";
+
 :root {
   --mainFont:"Open Sans", system-ui, sans-serif;
   --mainColor: #000;
@@ -11,6 +14,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  
 }
 
 html {
@@ -21,6 +25,7 @@ html {
 
 img {
   max-width:100%;
+  vertical-align: middle;
 }
 
 #hero {
@@ -55,3 +60,6 @@ p:nth-last-child(1){
 /* @media only screen and (min-width: 1000px) and (max-width: 10000px) {
 
 }  */
+
+
+
