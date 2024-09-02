@@ -13,6 +13,7 @@ export const products = {
 export const categories = {
   getAll: getCats,
   getNameById: getCatNameFromId,
+  getProductCats: getProductCats
 };
 
 // PRODUCT QUERIES
@@ -35,6 +36,23 @@ function getCatNameFromId(id) {
 
 // get all categories with subcats nested
 function getCats() {
+  const categories = getNestedCats();
+
+  const topLevelCats = categories.filter((cat) => cat.parent_id == null);
+
+  return topLevelCats;
+}
+
+// all bottom level cats that store products
+function getProductCats() {
+  const categories = getNestedCats();
+
+  const bottomLevelCats = categories.filter(cat => cat.subcats.length == 0);
+  
+  return bottomLevelCats
+}
+
+function getNestedCats() {
   // code from chatGPT
   const categories = categoriesDB;
   const catMap = {};
@@ -42,19 +60,21 @@ function getCats() {
   // Create a map of categories by id
   categories.forEach((category) => {
     category.subcats = [];
+    category.path = category.name;
     catMap[category.id] = category;
+
   });
 
   // Add each category to its parent's subcategories array
   categories.forEach((category) => {
     if (category.parent_id !== null) {
-      catMap[category.parent_id].subcats.push(category);
+      const parentCat = catMap[category.parent_id];
+      category.path = `${parentCat.path}/${category.name}`;
+      parentCat.subcats.push(category);
     }
   });
 
-  const topLevelCats = categories.filter((cat) => cat.parent_id == null);
-
-  return topLevelCats;
+  return categories;
 }
 
 // FOR PROGRAMMER CONVENIENCE

@@ -15,14 +15,28 @@ if (document.querySelector("#parent_id")) {
     
   })
 
+}
 
+// add product page
+if (document.querySelector("#category_id")) {
+  const optionsContainer = document.querySelector("#category_id");
+  const cats = categories.getAll();
+
+  // get only categories with no sub categories
+  const productCats = categories.getProductCats();
+
+  productCats.forEach(cat => {
+    optionsContainer.append(createCategoryOption(cat))
+  })
+
+  
 }
 
 function createCategoryOption(cat) {
   const option = document.createElement("option");
   option.value = cat.id;
   option.textContent = cat.path + "/";
-  
+
   return option
 }
 

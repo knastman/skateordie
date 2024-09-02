@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link href="styles/styles.css" rel="stylesheet" />
-  <script type="module" src="admin_script.js"></script>
+  <script type="module" src="../js/admin_script.js"></script>
 
   <!--Google fonts-->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -14,7 +14,51 @@
 
   <h1>Add Product</h1>
 
-  <form action=""></form>
+  <form action="">
+    <div>
+      <label for="name">Product Name</label>
+      <input name="name" id="name" type="text" required>
+    </div>
+
+    <div>
+      <label for="description">Description</label>
+      <textarea name="description" id="description"></textarea>
+    </div>
+
+    <div>
+      <label for="priceSEK">Price (SEK)</label>
+      <input name="priceSEK" id="priceSEK" type="number" required>
+    </div>
+
+    <div>
+      <label for="category_id">Category</label>
+      <select name="category_id" id="category_id" required>
+        <!-- // TODO add categories through js-->
+        <option>--</option>
+      </select>
+    </div>
+
+    <div>
+      <label for="color">Color</label>
+      <input name="color" id="color" type="text" required>
+    </div>
+
+    <fieldset>
+      <legend>Images</legend>
+      <div>
+        <label for="image1">Image url</label>
+        <input name="images[]" id="image1" type="text">
+      </div>
+      <div>
+        <label for="image2">Image url</label>
+        <input name="images[]" id="image2" type="text">
+        <button type="button" class="delete-image-input">remove image</button>
+      </div>
+      <button type="button">Add another image</button>
+    </fieldset>
+
+    <button type="submit" id="add_product">Add Product</button>
+  </form>
 
   
 </body>
