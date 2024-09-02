@@ -13,6 +13,7 @@ export const products = {
 export const categories = {
   getAll: getCats,
   getNameById: getCatNameFromId,
+  getProductCats: getProductCats
 };
 
 // PRODUCT QUERIES
@@ -59,16 +60,21 @@ function getNestedCats() {
   // Create a map of categories by id
   categories.forEach((category) => {
     category.subcats = [];
+    category.path = category.name;
     catMap[category.id] = category;
+
   });
 
   // Add each category to its parent's subcategories array
   categories.forEach((category) => {
     if (category.parent_id !== null) {
-      catMap[category.parent_id].subcats.push(category);
+      const parentCat = catMap[category.parent_id];
+      category.path = `${parentCat.path}/${category.name}`;
+      parentCat.subcats.push(category);
     }
   });
-  
+
+  return categories;
 }
 
 // FOR PROGRAMMER CONVENIENCE
