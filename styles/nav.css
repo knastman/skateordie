@@ -1,0 +1,73 @@
+/*** MAIN NAV ****/
+.main-navigation{
+  background-color: antiquewhite;
+  padding:20px;
+} 
+
+
+/*** PRODUCT NAV ****/
+
+/* Navigation container */
+.product-navigation {
+  text-transform: uppercase;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+  padding:0 0 10px 0;
+} 
+
+/* Level 1 */
+.product-navigation ul {
+  display: flex;
+  justify-content: space-around;
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.main-level{
+  font-weight: 700;
+  width: 500px;
+}
+
+.product-navigation ul a, 
+.product-navigation ul a:visited{
+  color:#131313;
+  text-decoration: none;
+} 
+
+/* Level 2 */
+.product-navigation ul > li > ul {
+  flex-direction: column;
+  margin-top:0.3em;
+  margin-bottom:0.5em;
+} 
+
+.product-navigation ul > li > ul > li a{
+  font-weight: 500 !important;
+} 
+
+.product-navigation ul > li > ul{
+  flex-direction: column;
+  padding-left: 1em;
+} 
+
+/* Level 3 */
+.product-navigation ul > li > ul > li > ul > li a, 
+.product-navigation ul > li > ul > li > ul > li a:visited{
+  color:#505050!important;
+} 
+
+/* All levels */
+.product-navigation ul a:hover, 
+.product-navigation ul > li > ul > li > ul > li a:hover{
+  color:#b1b1b1 !important;
+} 
+
+.nav-active {
+  color:#000000 !important;
+}
+
+
+

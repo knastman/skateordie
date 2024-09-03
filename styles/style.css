@@ -3,6 +3,7 @@
 ************************************/
 
 @import "slider.css";
+@import "nav.css";
 
 :root {
   --mainFont:"Open Sans", system-ui, sans-serif;
@@ -32,6 +33,10 @@ img {
   background-image: url(../images/hero.jpg);
 }
 
+#main-header{
+  display:flex;
+}
+
 /**** TYPOGRAPY ****/
 
 h1, h2, h3, h4, h5, h6 {
@@ -46,12 +51,10 @@ p:nth-last-child(1){
 }
 
 
-/**** Navigation ****/
-
-/* nav {
-
-} */
-
+#main-footer{
+  background-color: rgb(250 237 188);
+  padding:10px;
+}
 
 /********************* MEDIA QUERIES ************* MEDIA QUERIES *************/
 
