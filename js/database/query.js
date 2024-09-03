@@ -120,6 +120,39 @@ function allCats() {
 }
 
 
+// Functionality for adding products
+
+function allStoredProducts() {
+  return JSON.parse(sessionStorage.getItem("products")) || [];
+}
+
+// Funktion för att hämta alla produkter, både från databasen och sessionStorage
+export function getAllProducts() {
+  const dbProducts = products.getAll(); 
+
+  // Hämta produkter från sessionStorage
+  const storedProducts = allStoredProducts();
+
+  // Sammanfoga de två listorna
+  const allProducts = [...dbProducts, ...storedProducts];
+
+  return allProducts;
+}
+
+export function addNewProduct(userProduct) {
+  const allProducts = getAllProducts(); 
+  const highestId = allProducts.length > 0 ? Math.max(...allProducts.map(p => p.id)) : 0;
+
+  // Lägg till ett nytt unikt ID till den nya produkten
+  const newProduct = {
+    id: highestId + 1, 
+    ...userProduct 
+  };
+
+  const updatedProducts = [...allStoredProducts(), newProduct];
+  sessionStorage.setItem("products", JSON.stringify(updatedProducts));
+}
+
 // BASKET
 function addToBasket(product_id) {
 

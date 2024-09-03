@@ -1,5 +1,5 @@
 import { products, categories } from "./database/query.js";
-
+import { addNewProduct } from "./database/query.js";
 // add category page
 if (document.querySelector("#parent_id")) {
   const optionsContainer = document.querySelector("#parent_id");
@@ -79,5 +79,24 @@ function processSubcategories(category, path = '') {
   return allCategories;
 }
 
-// function
+const form = document.querySelector("form");
+if(form) {
+  form.addEventListener("submit", (e) => {
+    e.preventDefault();
+  
+    const formData = new FormData(form);
+    const imagesArray = formData.getAll('images[]').filter(url => url);
+  
+    const newProduct = {
+      name: formData.get('name'),
+      description: formData.get('description'),
+      priceSEK: parseFloat(formData.get('priceSEK')), 
+      color: formData.get('color'),
+      images: imagesArray.length === 1 ? imagesArray[0] : imagesArray
+    };
+  
+    addNewProduct(newProduct); 
+  });
+}
+
 

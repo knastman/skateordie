@@ -1,6 +1,7 @@
 import { products } from "./database/query.js";
+import { getAllProducts } from "./database/query.js";
 
-const allProducts = products.getAll();
+const allProducts = getAllProducts();
 
 const productList = document.querySelector("#productList");
 
