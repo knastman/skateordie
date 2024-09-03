@@ -16,6 +16,11 @@ export const categories = {
   getProductCats: getProductCats
 };
 
+export const basket = {
+  add: addToBasket,
+  get: getBasket
+}
+
 // PRODUCT QUERIES
 function getAllProds() {
   const products = productsDB;
@@ -76,6 +81,29 @@ function getNestedCats() {
 
   return categories;
 }
+
+
+// BASKET
+function addToBasket(item) {
+  // get previous basket
+  const basket = JSON.parse(sessionStorage.getItem('basket')) || [];
+
+  // add new item
+  basket.push(item);
+
+  // update basket
+  sessionStorage.setItem('basket', JSON.stringify(basket));
+}
+
+function getBasket() {
+  // get previous basket
+  const basket = JSON.parse(sessionStorage.getItem('basket')) || [];
+
+  return basket;
+  
+}
+
+
 
 // FOR PROGRAMMER CONVENIENCE
 function formatProd(product) {
