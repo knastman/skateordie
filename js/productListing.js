@@ -27,11 +27,18 @@ function listAllProducts() {
             <p>${product.name}</p>
             <p>${product.priceSEK + " SEK"}</p>`;
             console.log(productCardText)
+
+            productCard.addEventListener('mouseover', () => {
+                productCardImg.src = product.images[1];
+            })
+            productCard.addEventListener('mouseout', () => {
+                productCardImg.src = product.images[0];
+            })
         };
     });
 }
-
 listAllProducts();
+
 
 
 
