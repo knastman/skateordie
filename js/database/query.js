@@ -17,6 +17,11 @@ export const categories = {
   add: addNewCat
 };
 
+export const basket = {
+  add: addToBasket,
+  get: getBasket
+}
+
 // PRODUCT QUERIES
 function getAllProds() {
   const products = productsDB;
@@ -110,6 +115,26 @@ function allCats() {
   console.log(adminCategories)
 
   return categories
+}
+
+// BASKET
+function addToBasket(item) {
+  // get previous basket
+  const basket = JSON.parse(sessionStorage.getItem('basket')) || [];
+
+  // add new item
+  basket.push(item);
+
+  // update basket
+  sessionStorage.setItem('basket', JSON.stringify(basket));
+}
+
+function getBasket() {
+  // get previous basket
+  const basket = JSON.parse(sessionStorage.getItem('basket')) || [];
+
+  return basket;
+  
 }
 
 // FOR PROGRAMMER CONVENIENCE
