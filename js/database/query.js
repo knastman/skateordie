@@ -18,7 +18,9 @@ export const categories = {
 
 export const basket = {
   add: addToBasket,
-  get: getBasket
+  remove: removeFromBasket,
+  get: getBasket,
+  getInfo: getBasketInfo
 }
 
 // PRODUCT QUERIES
@@ -98,12 +100,45 @@ function addToBasket(product_id) {
   sessionStorage.setItem('basket', JSON.stringify(basket));
 }
 
+function removeFromBasket(id) {
+  // get previous basket
+  const basket = JSON.parse(sessionStorage.getItem('basket')) || [];
+
+  console.log(id, basket)
+  
+  const updatedBasket = basket.filter(i => i.id !== Number(id));
+  
+  console.log(id, updatedBasket);
+
+  //update basket
+  sessionStorage.setItem('basket', JSON.stringify(updatedBasket));
+
+}
+
 function getBasket() {
   // get previous basket
   const basket = JSON.parse(sessionStorage.getItem('basket')) || [];
 
   return basket;
   
+}
+
+function getBasketInfo() {
+  const basket = JSON.parse(sessionStorage.getItem('basket')) || [];
+
+  const basketProducts = basket.map(i => getProdById(i.product_id));
+
+  const total = basketProducts.map(i => i.priceSEK).reduce((t, c) => t + c, 0);
+
+  console.log(total);
+
+  const basketInfo = {
+    items: basket,
+    length: basket.length,
+    totalSEK: total
+  }
+
+  return basketInfo;
 }
 
 
