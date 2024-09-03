@@ -84,12 +84,15 @@ function getNestedCats() {
 
 
 // BASKET
-function addToBasket(item) {
+function addToBasket(product_id) {
   // get previous basket
   const basket = JSON.parse(sessionStorage.getItem('basket')) || [];
 
   // add new item
-  basket.push(item);
+  basket.push({
+    id: getUniqueId(basket),
+    product_id: Number(product_id)
+  });
 
   // update basket
   sessionStorage.setItem('basket', JSON.stringify(basket));
@@ -104,7 +107,6 @@ function getBasket() {
 }
 
 
-
 // FOR PROGRAMMER CONVENIENCE
 function formatProd(product) {
   let newProduct = product;
@@ -112,4 +114,16 @@ function formatProd(product) {
   newProduct.category = getCatNameFromId(product.category_id);
 
   return newProduct;
+}
+
+// array must be array of items where each item has key 'id'
+// returns a unique new id for array
+function getUniqueId(array) {
+  const ids = array.map(i => i.id);
+
+  const prevHighestId = ids.length > 0 ? Math.max(...ids) : 0;
+
+  const uniqueId = prevHighestId + 1;
+
+  return uniqueId;
 }
