@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="styles/produktsida.css" rel="stylesheet" />
+    <script type="module" src="js/script.js"></script>
+    <script type="module" src="js/query.js"></script>
+    <!-- Ensure query.js is loaded -->
+    <!--Google fonts-->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap"
+      rel="stylesheet"
+    />
+
+    <title>Skate or Die</title>
+  </head>
+  <body>
+    <header id="main-header">
+      <!-- Main header -->
+
+      <div id="logo">LOGO</div>
+
+      <nav class="product-navigation">
+        <ul class="main-level">
+          <li>
+            <a href="#">Men</a>
+            <ul>
+              <li><a href="#">Clothing</a></li>
+              <li><a href="#">Shoes</a></li>
+              <li><a href="#">Accessories</a></li>
+            </ul>
+          </li>
+          <li>
+            <a href="#" class="nav-active">Women</a>
+            <ul>
+              <li>
+                <a href="#">Clothing</a>
+                <ul>
+                  <li><a href="#">View all</a></li>
+                  <li><a href="#">Hoodies</a></li>
+                  <li><a href="#">Shirts</a></li>
+                  <li><a href="#">T-Shirts</a></li>
+                </ul>
+              </li>
+              <li><a href="#">Shoes</a></li>
+              <li><a href="#">Accessories</a></li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+
+      <!-- <nav class="main-navigation">
+          <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Contact</a></li>
+          </ul>
+        </nav>  -->
+    </header>
+
+    <div class="product-page">
+      <div class="image-gallery">
+        <img id="main-image" src="" alt="Product Image" />
+        <div class="thumbnail-row" id="thumbnail-row">
+          <!-- Thumbnails visas här -->
+        </div>
+      </div>
+      <div class="product-info">
+        <h1 class="product-title" id="product-title">Product Name</h1>
+        <p class="price" id="product-price">$0</p>
+
+        <div class="size-options">
+          <label for="size">Size:</label>
+          <select id="size" name="size"></select>
+        </div>
+
+        <button class="add-to-cart">Add to Cart</button>
+
+        <p class="product-description" id="product-description">
+          Product description will be loaded here.
+          <span id="show-more-text" class="hidden"></span>
+        </p>
+        <a id="show-more">Show more</a>
+      </div>
+    </div>
+
+    <footer id="main-footer">
+      <!-- Main footer -->
+      <a href="./admin/admin.html">Admin</a>
+      <a href="./contact.html"> Contact us</a>
+    </footer>
+
+    <script>
+      import { products } from "./js/query.js";
+
+      // Fetch product data by ID or index
+      const productId = 0; // Example, this would be dynamic based on the page or URL
+      const product = products.getById(productId);
+
+      const mainImage = document.getElementById("main-image");
+      const thumbnails = document.getElementById("thumbnail-row");
+      const productTitle = document.getElementById("product-title");
+      const productPrice = document.getElementById("product-price");
+      const productDescription = document.getElementById("product-description");
+      const showMoreText = document.getElementById("show-more-text");
+      const sizeSelect = document.getElementById("size");
+
+      // Update product details
+      mainImage.src = product.images[0];
+      product.images.forEach((image, index) => {
+        const thumbnail = document.createElement("img");
+        thumbnail.src = image;
+        thumbnail.alt = `Thumbnail ${index + 1}`;
+        thumbnail.classList.add("thumbnail");
+        thumbnail.addEventListener("click", () => {
+          mainImage.src = image;
+        });
+        thumbnails.appendChild(thumbnail);
+      });
+
+      productTitle.textContent = product.name;
+      productPrice.textContent = `${product.priceSEK} SEK`;
+      productDescription.textContent = product.description.split("<span")[0]; // show first part of description
+      showMoreText.innerHTML = product.description.split("<span")[1] || ""; // show hidden part
+
+      // Populate sizes
+      product.sizes.forEach((size) => {
+        const option = document.createElement("option");
+        option.value = size;
+        option.textContent = size;
+        sizeSelect.appendChild(option);
+      });
+
+      // Show more funktion
+      const showMoreLink = document.getElementById("show-more");
+      showMoreLink.addEventListener("click", function () {
+        if (showMoreText.classList.contains("hidden")) {
+          showMoreText.classList.remove("hidden");
+          showMoreLink.textContent = "Show less";
+        } else {
+          showMoreText.classList.add("hidden");
+          showMoreLink.textContent = "Show more";
+        }
+      });
+    </script>
+  </body>
+</html>
