@@ -32,8 +32,12 @@
 .productCardText {
     width: 19rem;
     height: 2rem;
-    margin: 0rem 0rem;
+    /* margin: 0rem 0rem; */
     display: flex;
     justify-content: space-between;
     align-items: center;
+}
+
+.productCardText p {
+    margin: 0;
 }
