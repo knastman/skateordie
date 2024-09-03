@@ -13,7 +13,8 @@ export const products = {
 export const categories = {
   getAll: getCats,
   getNameById: getCatNameFromId,
-  getProductCats: getProductCats
+  getProductCats: getProductCats,
+  add: addNewCat
 };
 
 export const basket = {
@@ -58,8 +59,9 @@ function getProductCats() {
 }
 
 function getNestedCats() {
+  const categories = allCats();
+
   // code from chatGPT
-  const categories = categoriesDB;
   const catMap = {};
 
   // Create a map of categories by id
@@ -82,6 +84,38 @@ function getNestedCats() {
   return categories;
 }
 
+function addNewCat(userCat) {
+  // get highest id
+  const allCatIds = allCats().map(c => c.id);
+  const highestId = Math.max(...allCatIds);
+
+  // add id to newCat
+  const newCat = {
+    id: highestId + 1,
+    ...userCat
+  }
+
+  // add to session storage
+  // POTENTIAL TODO: replace with firebase comms
+
+  // get previously added categories
+  let prevCats = JSON.parse(sessionStorage.getItem("categories")) || [];
+
+  prevCats.push(newCat);
+  
+  sessionStorage.setItem("categories", JSON.stringify(prevCats));
+
+}
+
+// all user and pre added cats
+function allCats() {
+  const adminCategories = JSON.parse(sessionStorage.getItem('categories')) || [];
+  const categories = [...categoriesDB, ...adminCategories];
+
+  console.log(adminCategories)
+
+  return categories
+}
 
 // BASKET
 function addToBasket(item) {
@@ -102,8 +136,6 @@ function getBasket() {
   return basket;
   
 }
-
-
 
 // FOR PROGRAMMER CONVENIENCE
 function formatProd(product) {

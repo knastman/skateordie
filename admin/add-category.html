@@ -17,7 +17,7 @@
   <form action="">
     <div>
       <label for="name">Category Name</label>
-      <input type="text" id="name" name="name">
+      <input type="text" id="name" name="name" required>
     </div>
 
     <div>
@@ -25,6 +25,16 @@
       <select name="parent_id" id="parent_id">
         <option value="null">Top level category</option>
       </select>
+    </div>
+
+    <div>
+      <label for="confirmationName">Confirm category name</label>
+      <input type="checkbox" id="confirmationName" required>
+    </div>
+
+    <div>
+      <label for="confirmationParent">Confirm parent category</label>
+      <input type="checkbox" id="confirmationParent" required>
     </div>
 
     <button type="submit" id="add_category">Add Category</button>
