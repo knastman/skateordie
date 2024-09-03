@@ -19,7 +19,9 @@ export const categories = {
 
 export const basket = {
   add: addToBasket,
-  get: getBasket
+  remove: removeFromBasket,
+  get: getBasket,
+  getInfo: getBasketInfo
 }
 
 // PRODUCT QUERIES
@@ -117,16 +119,38 @@ function allCats() {
   return categories
 }
 
+
 // BASKET
-function addToBasket(item) {
+function addToBasket(product_id) {
+
   // get previous basket
   const basket = JSON.parse(sessionStorage.getItem('basket')) || [];
 
   // add new item
-  basket.push(item);
+
+  basket.push({
+    id: getUniqueId(basket),
+    product_id: Number(product_id)
+  });
 
   // update basket
   sessionStorage.setItem('basket', JSON.stringify(basket));
+}
+
+
+function removeFromBasket(id) {
+  // get previous basket
+  const basket = JSON.parse(sessionStorage.getItem('basket')) || [];
+
+  console.log(id, basket)
+  
+  const updatedBasket = basket.filter(i => i.id !== Number(id));
+  
+  console.log(id, updatedBasket);
+
+  //update basket
+  sessionStorage.setItem('basket', JSON.stringify(updatedBasket));
+
 }
 
 function getBasket() {
@@ -137,6 +161,25 @@ function getBasket() {
   
 }
 
+function getBasketInfo() {
+  const basket = JSON.parse(sessionStorage.getItem('basket')) || [];
+
+  const basketProducts = basket.map(i => getProdById(i.product_id));
+
+  const total = basketProducts.map(i => i.priceSEK).reduce((t, c) => t + c, 0);
+
+  console.log(total);
+
+  const basketInfo = {
+    items: basket,
+    length: basket.length,
+    totalSEK: total
+  }
+
+  return basketInfo;
+}
+
+
 // FOR PROGRAMMER CONVENIENCE
 function formatProd(product) {
   let newProduct = product;
@@ -144,4 +187,16 @@ function formatProd(product) {
   newProduct.category = getCatNameFromId(product.category_id);
 
   return newProduct;
+}
+
+// array must be array of items where each item has key 'id'
+// returns a unique new id for array
+function getUniqueId(array) {
+  const ids = array.map(i => i.id);
+
+  const prevHighestId = ids.length > 0 ? Math.max(...ids) : 0;
+
+  const uniqueId = prevHighestId + 1;
+
+  return uniqueId;
 }
