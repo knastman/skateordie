@@ -15,6 +15,23 @@ if (document.querySelector("#parent_id")) {
     
   })
 
+  // submit button
+  const form = document.querySelector("form");
+
+  form.addEventListener("submit", (e) => {
+    e.preventDefault();
+
+    const formData = new FormData(form);
+
+    const newCat = Object.fromEntries(formData.entries());
+
+    newCat.parent_id = Number(newCat.parent_id) || null;
+
+    categories.add(newCat);
+
+    window.location.reload();
+  })
+
 }
 
 // add product page
@@ -61,4 +78,6 @@ function processSubcategories(category, path = '') {
 
   return allCategories;
 }
+
+// function
 
