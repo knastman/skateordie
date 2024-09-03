@@ -122,10 +122,12 @@ function allCats() {
 
 // BASKET
 function addToBasket(product_id) {
+
   // get previous basket
   const basket = JSON.parse(sessionStorage.getItem('basket')) || [];
 
   // add new item
+
   basket.push({
     id: getUniqueId(basket),
     product_id: Number(product_id)
@@ -134,6 +136,7 @@ function addToBasket(product_id) {
   // update basket
   sessionStorage.setItem('basket', JSON.stringify(basket));
 }
+
 
 function removeFromBasket(id) {
   // get previous basket
@@ -175,6 +178,7 @@ function getBasketInfo() {
 
   return basketInfo;
 }
+
 
 // FOR PROGRAMMER CONVENIENCE
 function formatProd(product) {

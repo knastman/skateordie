@@ -1,3 +1,4 @@
+
 import { basket, products } from "./database/query.js";
 
 export default class BuyButton{
@@ -10,6 +11,7 @@ export default class BuyButton{
     return button;
   }
 }
+
 
 // apperance of basket items
 function createBasketItem(item) {
@@ -94,3 +96,8 @@ document.addEventListener("click", (e) => {
   }
     
 })
+
+  }
+    
+})
+
