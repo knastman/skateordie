@@ -1,7 +1,15 @@
 import { products } from "./database/query.js";
 
+// Product chosen from productListing.js is saved in localStorage shown on productPage.js
+const chosenProductID = localStorage.getItem('allProducts');
+const chosenProductCatID = localStorage.getItem('allproducts');
+
+console.log("product id is " + chosenProductID)
+console.log("The product category id is " + chosenProductCatID)
+
+
 // Fetch product data by ID or index
-const productId = 0; // Example, this would be dynamic based on the page or URL
+const productId = chosenProductID; // Example, this would be dynamic based on the page or URL
 const product = products.getById(productId);
 
 const productWrapper = document.querySelector(".product-page")
