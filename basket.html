@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script type="module" src="js/script.js"></script>
+    <script type="module" src="js/basket/createBasketItem.js"></script>
+    <link rel="stylesheet" href="styles/basket.css">
+    <title>Basket</title>
+</head>
+<body>
+    <header id="main-header">
+        <!-- Main header -->
+        <nav class="main-navigation">
+            <ul>
+              <li><a href="#">Link1</a></li>
+              <li><a href="#">Link2</a></li>
+              <li><a href="#">Link3</a></li>
+            </ul>
+        </nav>
+    </header>
+    <div id="basket">
+        <div>
+            <h3>SHOPPING Cart </h3> 
+            <span id="basketLength">
+            <!-- number of items in basket will appear here -->
+            </span>
+        </div>
+        <div id="basketWrapper">
+            <div class="placeholder-div"></div>
+            <div class="placeholder-div"></div>
+            <div class="placeholder-div"></div>
+            <div class="placeholder-div"></div>
+            <div class="placeholder-div"></div>
+            <div class="placeholder-div"></div>
+            <!-- basket items will be appended here -->
+        </div>
+        <div>Total: 
+            <span id="basketTotal">
+            <!-- basket total cost will appear here -->
+            </span>
+            SEK
+        </div>
+        <div id="basketContinueOrCheckout">
+            <button id="continueShopping">Continue Shopping</button>
+            <button id="checkoutBasket">CHECKOUT</button>
+        </div>
+    </div>
+    <footer id="main-footer">
+        <!-- Main footer -->
+        <a href="./admin/admin.html">admin</a>
+    </footer>
+</body>
+</html>

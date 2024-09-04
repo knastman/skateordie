@@ -1,0 +1,27 @@
+.placeholder-div {
+    flex: 0 0 auto; 
+    width: 150px; 
+    height: 200px; 
+    margin-right: 10px; 
+    box-sizing: border-box;
+    background-color: grey;
+}
+
+#basketWrapper {
+    display: flex; 
+    overflow-x: auto; 
+    white-space: nowrap; 
+    padding: 10px; 
+    box-sizing: border-box;
+
+    scrollbar-width: none; /* För Firefox */
+    -ms-overflow-style: none; /* För Internet Explorer och Edge */
+}
+
+#basketWrapper::-webkit-scrollbar {
+    display: none; /* För WebKit-baserade webbläsare */
+}
+
+#basketLengthAndTotal {
+    display: flex;
+}
