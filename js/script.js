@@ -4,14 +4,9 @@ import { displayCategories } from "./displayNav.js";
 // products.getAll(), products.getById()
 // categories.getAll(), categories.getNameById()
 
-//Get all products 
-async function fetchProducts() {
-  const allProducts = await products.getAll(); 
-  return allProducts; 
-}
+// Displays slider with new products, frontpage.
 
-fetchProducts().then(displaySlide());
-export {fetchProducts}
+displaySlide();
 
 //Bygger menyn dynamiskt/hämtar categorier databasen
 displayCategories();
