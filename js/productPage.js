@@ -4,6 +4,7 @@ import { products } from "./database/query.js";
 const productId = 0; // Example, this would be dynamic based on the page or URL
 const product = products.getById(productId);
 
+const productWrapper = document.querySelector(".product-page")
 const mainImage = document.getElementById("main-image");
 const thumbnails = document.getElementById("thumbnail-row");
 const productTitle = document.getElementById("product-title");
@@ -11,6 +12,8 @@ const productPrice = document.getElementById("product-price");
 const productDescription = document.getElementById("product-description");
 const showMoreText = document.getElementById("show-more-text");
 const sizeSelect = document.getElementById("size");
+
+productWrapper.id = product.id;
 
 // Update product details
 mainImage.src = product.images[0];
