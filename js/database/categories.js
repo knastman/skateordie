@@ -6,7 +6,7 @@ export default [
   },
   {
     id: 2,
-    name: "Mens Clothing",
+    name: "Clothing",
     parent_id: 1,
   },
   {
@@ -26,17 +26,17 @@ export default [
   },
   {
     id: 6,
-    name: "Womens Clothing",
+    name: "Clothing",
     parent_id: 5,
   },
   {
     id: 7,
-    name: "Mens Shoes",
+    name: "Shoes",
     parent_id: 1,
   },
   {
     id: 8,
-    name: "Entill under men",
+    name: "accessories",
     parent_id: 1,
   },
 ];
