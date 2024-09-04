@@ -12,10 +12,14 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    /* justify-content: center; */
     width: 20rem;
     height: 30rem;
-    /* border: 1px solid black; */
+
+}
+
+.productCard:hover {
+    /* box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px; */
+    cursor: pointer;
 
 }
 
@@ -28,8 +32,12 @@
 .productCardText {
     width: 19rem;
     height: 2rem;
-    margin: 0rem 0rem;
+    /* margin: 0rem 0rem; */
     display: flex;
     justify-content: space-between;
     align-items: center;
+}
+
+.productCardText p {
+    margin: 0;
 }

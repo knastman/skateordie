@@ -1,6 +1,7 @@
 import { products } from "./database/query.js";
+import { getAllProducts } from "./database/query.js";
 
-const allProducts = products.getAll();
+const allProducts = getAllProducts();
 
 const productList = document.querySelector("#productList");
 
@@ -27,11 +28,18 @@ function listAllProducts() {
             <p>${product.name}</p>
             <p>${product.priceSEK + " SEK"}</p>`;
             console.log(productCardText)
+
+            productCard.addEventListener('mouseover', () => {
+                productCardImg.src = product.images[1];
+            })
+            productCard.addEventListener('mouseout', () => {
+                productCardImg.src = product.images[0];
+            })
         };
     });
 }
-
 listAllProducts();
+
 
 
 

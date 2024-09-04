@@ -19,4 +19,24 @@ export default [
     name: "T-Shirts",
     parent_id: 2,
   },
+  {
+    id: 5,
+    name: "Women",
+    parent_id: null,
+  },
+  {
+    id: 6,
+    name: "Clothing",
+    parent_id: 5,
+  },
+  {
+    id: 7,
+    name: "Shoes",
+    parent_id: 1,
+  },
+  {
+    id: 8,
+    name: "accessories",
+    parent_id: 1,
+  },
 ];
