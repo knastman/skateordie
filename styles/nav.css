@@ -7,6 +7,10 @@
 
 /*** PRODUCT NAV ****/
 
+#main-header{
+  margin-top: 10px;
+}
+
 /* Navigation container */
 .product-navigation {
   text-transform: uppercase;
@@ -24,6 +28,7 @@
   list-style-type: none;
   padding: 0;
   margin: 0;
+
 }
 
 #main-level{
@@ -38,10 +43,17 @@
 } 
 
 /* Level 2 */
-.product-navigation ul > li > ul {
+.product-navigation ul > li > ul:first-of-type {
   flex-direction: column;
   margin-top:0.3em;
   margin-bottom:0.5em;
+  display: none;
+  position: absolute; 
+  background-color: white; 
+  min-height: 500px;
+  width: 1350px;
+  right: -520px;
+  z-index: 1;
 } 
 
 .product-navigation ul > li > ul > li a{
@@ -69,5 +81,29 @@
   color:#000000 !important;
 }
 
+
+/* TEST */
+
+.dropdown{
+  position: relative;
+  display: inline-block;
+  height: 30px;
+}
+
+.dropdown-content li{
+  display:flex;
+  align-items: center;
+}
+
+.dropdown-content li:first-of-type{
+  margin-top: 30px;
+}
+
+ #main-level:hover .dropdown-content{
+   display: flex;
+   flex-direction: row;
+   justify-content: space-between;
+   margin-top: 10px;
+}
 
 
