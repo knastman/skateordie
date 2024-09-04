@@ -29,9 +29,9 @@ img {
   vertical-align: middle;
 }
 
-#hero {
+/* #hero {
   background-image: url(../images/hero.jpg);
-}
+} */
 
 #main-header{
   display:flex;
