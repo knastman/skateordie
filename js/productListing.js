@@ -35,6 +35,17 @@ function listAllProducts() {
             productCard.addEventListener('mouseout', () => {
                 productCardImg.src = product.images[0];
             })
+
+            // CHOOSING A PRODUCT AND BEING SENT TO THE PRODUCTPAGE
+
+            productCard.addEventListener('click', () => {
+                console.log("product id is " + product.id)
+                console.log("The product category id is " + product.category_id)
+
+                localStorage.setItem('allProducts', product.id)
+                localStorage.setItem('allproducts', product.category_id)
+                window.location.href = "../produktsida.html"
+            })
         };
     });
 }
