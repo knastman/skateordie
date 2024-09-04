@@ -7,16 +7,14 @@ This document briefly describes the contents of the folder and how to use the ba
 The basket functionality is initialized through `init.js`. When this script is called, and if a corresponding [HTML basket element](#html-basket-element-structure) is present, it will automatically be populated with items from `sessionStorage`.
 
 ### Steps to Implement:
-1. **Add BuyButton Instances**: 
-   - The only component that needs to be added to the project outside of the basket folder is instances of the `BuyButton` class.
-   - These `BuyButton` instances should be appended to `.productCard` items.
-   - To do this, import `BuyButton.js` into module that creates `.productCard` and append one into each element.
-   - Ex: `card.append(new BuyButton())` 
+1. **Add "Add to Cart" Buttons**: 
+   - This can be done by using the `AddToCartButton` class, or by adding the class `add-to-cart` on a button item.
+   - These buttons need to either be in a `.product-page` or `.productCard` wrapper, that need to have the `id` of the product that should be added to the basket.
 
 2. **Import `init.js`**:
    - Ensure `init.js` is imported into your project, in `script.js`.
    - Ex: `import "./basket/init.js`;
-   - Once `BuyButton` instances are in place and `init.js` is imported, the basket should work.
+   - Once "Add to Cart" buttons are in place and `init.js` is imported, the basket should work.
 
 ## HTML Basket Element Structure
 
