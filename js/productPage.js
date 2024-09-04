@@ -4,8 +4,7 @@ import { products } from "./database/query.js";
 const chosenProductID = localStorage.getItem('allProducts');
 const chosenProductCatID = localStorage.getItem('allproducts');
 
-console.log("product id is " + chosenProductID)
-console.log("The product category id is " + chosenProductCatID)
+console.log("product id: ", + chosenProductID, "| category id:", chosenProductCatID)
 
 
 // Fetch product data by ID or index
