@@ -1,16 +1,15 @@
-import {fetchProducts} from './script.js'
-
+import { products } from "./database/query.js";
 // Displays slides on frontpage 
 
 async function displaySlide() {
   const slideContainers = document.querySelectorAll(".slides"); 
-  const products = await fetchProducts(); 
+  const newProducts = products.getAll(); 
 
-  products.forEach((product, index) => {
-    if (product.images && product.images.length > 0) { 
+  newProducts.forEach((newProducts, index) => {
+    if (newProducts.images && newProducts.images.length > 0) { 
       const slideImg = document.createElement('img'); 
       slideImg.style.width = "100%"
-      slideImg.src = product.images[0]; 
+      slideImg.src = newProducts.images[0]; 
       slideContainers[index].appendChild(slideImg); 
     }
   });
@@ -19,20 +18,32 @@ async function displaySlide() {
 let slideIndex = 1;
 showSlides(slideIndex);
 
-document.querySelector('.prev').addEventListener('click', function() {
-    plusSlides(-1);
-});
+function setupSlideNavigation() {
+    const prevButton = document.querySelector('.prev');
+    const nextButton = document.querySelector('.next');
+    const dots = document.querySelectorAll('.dot');
 
-document.querySelector('.next').addEventListener('click', function() {
-    plusSlides(1);
-});
+    if (prevButton) {
+        prevButton.addEventListener('click', function() {
+            plusSlides(-1);
+        });
+    }
 
-document.querySelectorAll('.dot').forEach(function(dot) {
-    dot.addEventListener('click', function() {
-        let slideNumber = parseInt(this.getAttribute('data-slide'));
-        currentSlide(slideNumber);
-    });
-});
+    if (nextButton) {
+        nextButton.addEventListener('click', function() {
+            plusSlides(1);
+        });
+    }
+
+    if (dots.length > 0) {
+        dots.forEach(function(dot) {
+            dot.addEventListener('click', function() {
+                let slideNumber = parseInt(this.getAttribute('data-slide'));
+                currentSlide(slideNumber);
+            });
+        });
+    }
+}
 
 function plusSlides(n) {
     showSlides(slideIndex += n);
@@ -46,6 +57,7 @@ function showSlides(n) {
     let i;
     let slides = document.getElementsByClassName("slides");
     let dots = document.getElementsByClassName("dot");
+    if (slides.length === 0) return;
     if (n > slides.length) {slideIndex = 1}
     if (n < 1) {slideIndex = slides.length}
     for (i = 0; i < slides.length; i++) {
@@ -58,4 +70,9 @@ function showSlides(n) {
     dots[slideIndex-1].className += " active";
 }
 
-export {displaySlide, showSlides}
+if (document.querySelector('.slides')) {
+    setupSlideNavigation();
+}
+
+
+export {displaySlide}
