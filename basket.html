@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -9,9 +10,15 @@
     <script type="module" src="js/basket/continueButton.js"></script>
     <script type="module" src="js/basket/previousButton.js"></script>
     <link rel="stylesheet" href="styles/basket.css">
+    <link rel="stylesheet" href="styles/style.css">
     <title>Basket</title>
 </head>
+
 <body>
+    <header id="main-header">
+        <!-- Main header -->
+        <div id="logo"><a href="./">LOGO</a></div>
+    </header>
     <main id="checkoutBasketContainer">
         <section id="checkout">
             <div class="checkoutHeader">
@@ -24,15 +31,15 @@
                     <h3>CONTACT</h3>
                     <!-- <label for="email">Email</label> -->
                     <input type="email" id="email backgroundColor" name="email" placeholder="Email">
-                
+
                     <!-- <label for="phone">Phone</label> -->
                     <input type="phone" id="phone" name="phone" placeholder="Phone">
                 </div>
-            
+
                 <div class="infoDelivery">
                     <h3>DELIVERY ADDRESS</h3>
                     <label for="country">Country</label>
-                    <select name="country" id="country">    
+                    <select name="country" id="country">
                         <option value="sweden">Sweden</option>
                         <option value="switzerland">Switzerland</option>
                         <option value="netherlands">Netherlands</option>
@@ -41,23 +48,23 @@
                         <option value="usa">USA</option>
                         <option value="croatia">Croatia</option>
                     </select>
-                
+
                     <!-- <label for="firstname">First Name</label> -->
                     <input type="text" id="firstname" name="firstname" placeholder="First Name">
-                
+
                     <!-- <label for="lastname">Last Name</label> -->
                     <input type="text" id="lastname" name="lastname" placeholder="Lastname">
-                
+
                     <!-- <label for="streetname">Street name</label> -->
                     <input type="text" id="streetname" name="streetname" placeholder="Street Name">
-                
+
                     <!-- <label for="living">Apartment, suite, etc.</label> -->
                     <input type="text" id="living" name="living" placeholder="Apartment, suite, etc.">
-                
+
                     <div class="postalCity">
                         <!-- <label for="postalcode">Postal code</label> -->
                         <input type="text" id="postalcode" name="postalcode" placeholder="Postal code">
-                    
+
                         <!-- <label for="city">City</label> -->
                         <input type="text" id="city" name="city" placeholder="City">
                     </div>
@@ -120,24 +127,25 @@
 
         <section id="basket">
             <div id="basketInfo">
-                <h3>ORDER SUMMARY </h3> 
+                <h3>ORDER SUMMARY </h3>
                 <span id="basketLength">
-                <!-- number of items in basket will appear here -->
+                    <!-- number of items in basket will appear here -->
                 </span>
             </div>
             <div id="basketWrapper">
                 <!-- basket items will be appended here -->
             </div>
-            <div>Total: 
+            <div>Total:
                 <span id="basketTotal">
-                <!-- basket total cost will appear here -->
+                    <!-- basket total cost will appear here -->
                 </span>
                 SEK
             </div>
             <div id="basketContinueOrCheckout">
-            
+
             </div>
         </section>
     </main>
 </body>
+
 </html>
