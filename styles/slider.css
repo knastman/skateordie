@@ -40,22 +40,16 @@
   background-color: rgba(0,0,0,0.6);
 }
 
-#hero .title{
+#hero h2{
   position: absolute;
+  left: 8px;
+  top: 9px;
   z-index: 100;
-  left: 0;
-  right: 0;
-  text-align: center;
-}
-
-#hero .title h2{
   background-color: var(--mainColor);
   color: var(--mainTextColor);
-  margin-top: 14px;
   padding: 14px;
   font-size: 24px;
-  display: inline-block;
-
+  cursor:default;
 }
 
 .text {
@@ -86,7 +80,7 @@
   padding: 8px 12px;
   position: absolute;
   top: 8px;
-  left: 8px;
+  right: 9px;
 }
 
 .dot {
