@@ -4,6 +4,8 @@ import { getAllProducts } from "./database/query.js";
 const categoryId = localStorage.getItem('CategoryId');
 console.log(categoryId)
 
+const savedCategoryId = products.getAllFromCategory(categoryId)
+console.log(savedCategoryId)
 const allProducts = getAllProducts();
 
 const productList = document.querySelector("#productList");
