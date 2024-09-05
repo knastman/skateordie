@@ -27,6 +27,10 @@
   object-position: center ;
 }
 
+.slides{
+  cursor: pointer;
+}
+
 .next {
   right: 0;
   border-radius: 3px 0 0 3px;
@@ -36,22 +40,53 @@
   background-color: rgba(0,0,0,0.6);
 }
 
-.text {
-  color: #f2f2f2;
-  font-size: 15px;
-  padding: 8px 12px;
+#hero .title{
   position: absolute;
-  bottom: 8px;
-  width: 100%;
+  z-index: 100;
+  left: 0;
+  right: 0;
   text-align: center;
 }
 
-.numbertext {
+#hero .title h2{
+  background-color: var(--mainColor);
+  color: var(--mainTextColor);
+  margin-top: 14px;
+  padding: 14px;
+  font-size: 24px;
+  display: inline-block;
+
+}
+
+.text {
+  font-size: 15px;
+  position: absolute;
+  width: 100%;
+  bottom: 8px;
+  text-align: center;
+}
+
+.text p {
   color: #f2f2f2;
+  background-color: black;
+  display: inline-block;
+  padding: 8px 12px;
+  margin-bottom: 8px;
+}
+
+.slides:hover .text p{
+  color: black;
+  background-color: #f2f2f2;
+}
+
+.numbertext {
+  color: black;
+  background-color: whitesmoke;
   font-size: 14px;
   padding: 8px 12px;
   position: absolute;
-  top: 0;
+  top: 8px;
+  left: 8px;
 }
 
 .dot {

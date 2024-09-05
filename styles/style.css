@@ -7,7 +7,7 @@
 
 :root {
   --mainFont:"Open Sans", system-ui, sans-serif;
-  --mainColor: #000;
+  --mainColor: rgb(250 237 188);
   --mainTextColor:#000; 
 }
 
