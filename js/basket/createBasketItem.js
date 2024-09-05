@@ -1,12 +1,12 @@
 import { products } from "../database/query.js";
 import RemoveButton from "./RemoveButton.js";
+import BuyButton from "./BuyButton.js";
 
 // apperance of basket items
 export function createBasketItem(item) {
   
   // --- Cannot be changed without breaking functionality
   const productInfo = products.getById(item.product_id);
-
   const card = document.createElement("div");
   card.classList.add("basketCard") 
   card.id = item.id;
@@ -18,6 +18,9 @@ export function createBasketItem(item) {
     <p>${productInfo.name}</p>
     <p>price: ${productInfo.priceSEK}kr</p>
   `;
+
+  //add the buybutton to the card
+  card.append(new BuyButton());
 
   // must exist but can be appended elsewhere within basketCard
   card.append(new RemoveButton()) 
