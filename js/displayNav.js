@@ -9,7 +9,6 @@ export function displayCategories() {
 
   //Get all categories from db
   const allCategories = categories.getAll();
-  console.log(allCategories);
 
 
   //Create nav with categories
