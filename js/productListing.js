@@ -49,7 +49,7 @@ function listAllProducts() {
 
                 localStorage.setItem('allProducts', product.id)
                 localStorage.setItem('allproducts', product.category_id)
-                window.location.href = "../produktsida.html"
+                window.location.href = "./../produktsida.html"
             })
         };
     });

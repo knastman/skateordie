@@ -55,7 +55,7 @@ export function displayCategories() {
         a.addEventListener('click', () => {
           console.log(subcatL3.id)
           localStorage.setItem('CategoryId', subcatL3.id)
-          window.location.href = "../produktkort.html"
+          window.location.href = "./../produktkort.html"
 
         })
       }
