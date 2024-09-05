@@ -8,7 +8,7 @@ import "./basket/init.js"
 
 // Displays slider with new products, frontpage.
 // only on index
-if(document.location.pathname == "/") {
+if (document.location.pathname == "/" || document.location.pathname == "/index.html") {
   displaySlide();
 }
 

@@ -11,7 +11,7 @@ async function displaySlide() {
       slideImg.style.width = "100%"
       slideImg.src = newProducts.images[0]; 
       slideContainers[index].appendChild(slideImg); 
-      slideContainers[index].querySelector(".text").textContent = newProducts.name
+      slideContainers[index].querySelector(".text p").textContent = newProducts.name
         
       slideImg.addEventListener("click", () => {
         localStorage.setItem('allProducts', newProducts.id)
