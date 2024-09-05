@@ -1,0 +1,89 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+#contact-section {
+    display: flex;
+
+    /* justify-content: space-around; */
+}
+
+#contact-headline {
+    display: flex;
+    justify-content: center;
+    font-size: 6.5rem;
+    width: 50%;
+
+
+}
+
+.contact-form {
+    display: flex;
+    justify-content: center;
+    width: 50%;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+
+    align-items: center;
+}
+
+.contact-text {
+    font-weight: lighter;
+    font-size: 2rem;
+    width: 60%;
+    margin-top: 10rem;
+    margin-bottom: 3rem;
+}
+
+#contact-information {
+    display: flex;
+    justify-content: space-between;
+    width: 60%;
+    font-weight: bold;
+    margin-bottom: 3rem;
+
+}
+
+#name,
+#email {
+    border: 0.5px solid grey;
+    padding: 0.5rem;
+    width: 110%;
+    margin-top: 0.5rem;
+}
+
+#message-information {
+    font-weight: bold;
+    margin-bottom: 1rem;
+
+}
+
+#message {
+    width: 65%;
+    padding: 0.5rem;
+    margin-bottom: 2rem;
+    border: 0.5px solid grey;
+}
+
+.form button {
+    margin-bottom: 2rem;
+    width: 7rem;
+    color: white;
+    background-color: black;
+    border: none;
+    padding: 0.5rem;
+    border-radius: 5px;
+    font-weight: bolder;
+}
+
+.form button:hover {
+    background-color: white;
+    border: 0.5px solid grey;
+    color: black;
+    cursor: pointer;
+
+}
