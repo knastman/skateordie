@@ -2,11 +2,9 @@ import { products } from "./database/query.js";
 import { getAllProducts } from "./database/query.js";
 
 const categoryId = localStorage.getItem('CategoryId');
-console.log(categoryId)
 
 const savedCategoryId = products.getAllFromCategory(categoryId)
-console.log(savedCategoryId)
-const allProducts = getAllProducts();
+const allProducts = savedCategoryId || getAllProducts();
 
 const productList = document.querySelector("#productList");
 
@@ -32,7 +30,6 @@ function listAllProducts() {
             productCardText.innerHTML = `
             <p>${product.name}</p>
             <p>${product.priceSEK + " SEK"}</p>`;
-            console.log(productCardText)
 
             productCard.addEventListener('mouseover', () => {
                 productCardImg.src = product.images[1];
