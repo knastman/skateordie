@@ -8,6 +8,7 @@ import productsDB from "./products.js";
 export const products = {
   getAll: getAllProds,
   getById: getProdById,
+  getAllFromCategory: getProdByCat
 };
 
 export const categories = {
@@ -35,6 +36,11 @@ function getProdById(id) {
   const product = productsDB.find((i) => i.id == id);
 
   return formatProd(product);
+}
+
+function getProdByCat(id) {
+  const products = getAllProds();
+  return products.filter(p => p.category_id == Number(id) )
 }
 
 // CATEGORY QUERIES
