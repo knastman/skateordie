@@ -7,8 +7,10 @@ import "./basket/init.js"
 // categories.getAll(), categories.getNameById()
 
 // Displays slider with new products, frontpage.
-
-displaySlide();
+// only on index
+if(document.location.pathname == "/") {
+  displaySlide();
+}
 
 //Bygger menyn dynamiskt/hämtar categorier databasen
 displayCategories();
