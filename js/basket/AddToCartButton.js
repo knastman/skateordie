@@ -1,10 +1,10 @@
 
-export default class BuyButton{
+export default class AddToCartButton{
   constructor() {
     const button = document.createElement("button");
     button.type = "button";
-    button.textContent = "buy";
-    button.classList.add("buy-item")
+    button.textContent = "Add to Cart";
+    button.classList.add("add-to-cart")
 
     return button;
   }
