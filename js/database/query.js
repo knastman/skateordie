@@ -114,7 +114,7 @@ function allCats() {
   const adminCategories = JSON.parse(sessionStorage.getItem('categories')) || [];
   const categories = [...categoriesDB, ...adminCategories];
 
-  console.log(adminCategories)
+  // console.log(adminCategories)
 
   return categories
 }
