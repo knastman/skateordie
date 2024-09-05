@@ -6,17 +6,17 @@ export default [
   },
   {
     id: 2,
-    name: "Mens Clothing",
+    name: "Clothing",
     parent_id: 1,
   },
   {
     id: 3,
-    name: "Mens Denim",
+    name: "Denim",
     parent_id: 2,
   },
   {
     id: 4,
-    name: "Mens T-Shirts",
+    name: "T-Shirts",
     parent_id: 2,
   },
   {
@@ -26,27 +26,17 @@ export default [
   },
   {
     id: 6,
-    name: "Womens Clothing",
+    name: "Clothing",
     parent_id: 5,
   },
   {
     id: 7,
-    name: "Mens Shoes",
+    name: "Shoes",
     parent_id: 1,
   },
   {
     id: 8,
-    name: "M accessories",
+    name: "accessories",
     parent_id: 1,
-  },
-  {
-    id: 4,
-    name: "Womens T-Shirts",
-    parent_id: 6,
-  },
-  {
-    id: 4,
-    name: "Womens Shoes",
-    parent_id: 5,
   },
 ];

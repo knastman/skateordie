@@ -79,47 +79,39 @@
 }
 
 
-
-
 /******************************************************************
-  Nedan CSS måste avmarkeras för att Andréas kod ska fungera
+  DROPDOWN MENYER
 *******************************************************************/
 
 
-/* .product-navigation ul > li > ul:first-of-type {
-  flex-direction: column;
-  margin-top:0.3em;
-  margin-bottom:0.5em;
-  display: none;
-  position: absolute; 
-  background-color: white; 
-  min-height: 500px;
-  width: 1350px;
-  right: -520px;
-  z-index: 1;
-}  */
-
-
-/* TEST för dropdown menu*/
-
-/* .dropdown{
+li {
   position: relative;
-  display: inline-block;
-  height: 30px;
 }
 
-.dropdown-content li{
-  display:flex;
-  align-items: center;
+#main-level > li > ul{
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: #f9f9f9;
+  padding: 0;
+  margin: 0;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
 }
 
-.dropdown-content li:first-of-type{
-  margin-top: 30px;
+
+#main-level > li:hover > ul {
+  display: block;
 }
 
- #main-level:hover .dropdown-content{
-   display: flex;
-   flex-direction: row;
-   justify-content: space-between;
-   margin-top: 10px;
-} */
+a {
+  display: block;
+  padding: 10px;
+  text-decoration: none;
+  color: #333;
+  
+}
+
+
