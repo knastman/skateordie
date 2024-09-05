@@ -27,6 +27,10 @@
   object-position: center ;
 }
 
+.slides{
+  cursor: pointer;
+}
+
 .next {
   right: 0;
   border-radius: 3px 0 0 3px;
@@ -70,12 +74,19 @@
   margin-bottom: 8px;
 }
 
+.slides:hover .text p{
+  color: black;
+  background-color: #f2f2f2;
+}
+
 .numbertext {
-  color: #f2f2f2;
+  color: black;
+  background-color: whitesmoke;
   font-size: 14px;
   padding: 8px 12px;
   position: absolute;
-  top: 0;
+  top: 8px;
+  left: 8px;
 }
 
 .dot {
