@@ -1,73 +1,75 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link href="styles/produktsida.css" rel="stylesheet" />
-    <script type="module" src="js/script.js"></script>
-    <script type="module" src="js/productPage.js"></script>
-    <!-- Ensure query.js is loaded -->
-    <!--Google fonts-->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap"
-      rel="stylesheet"
-    />
 
-    <title>Skate or Die</title>
-  </head>
-  <body>
-    <header id="main-header">
-      <!-- Main header -->
-      <div id="logo"><a href="./">LOGO</a></div>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link href="styles/produktsida.css" rel="stylesheet" />
+  <script type="module" src="js/script.js"></script>
+  <script type="module" src="js/productPage.js"></script>
+  <!-- Ensure query.js is loaded -->
+  <!--Google fonts-->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap"
+    rel="stylesheet" />
 
-      <nav class="product-navigation">
-        <ul id="main-level">
-          <!-- Product nav here (dynamic) -->
-        </ul>
-      </nav>
-      
-      <!-- <nav class="main-navigation">
+  <title>Skate or Die</title>
+</head>
+
+<body>
+  <header id="main-header">
+    <!-- Main header -->
+    <div id="logo"><a href="./">LOGO</a></div>
+
+    <nav class="product-navigation">
+      <ul id="main-level">
+        <!-- Product nav here (dynamic) -->
+      </ul>
+    </nav>
+    <a href="./basket.html">CART</a>
+
+    <!-- <nav class="main-navigation">
         <ul>
           <li><a href="#">Home</a></li>
           <li><a href="#">About</a></li>
           <li><a href="#">Contact</a></li>
         </ul>
       </nav>  -->
-    </header>
+  </header>
 
-    <div class="product-page">
-      <div class="image-gallery">
-        <img id="main-image" src="" alt="Product Image" />
-        <div class="thumbnail-row" id="thumbnail-row">
-          <!-- Thumbnails visas här -->
-        </div>
-      </div>
-      <div class="product-info">
-        <h1 class="product-title" id="product-title">Product Name</h1>
-        <p class="price" id="product-price">$0</p>
-
-        <div class="size-options">
-          <label for="size">Size:</label>
-          <select id="size" name="size"></select>
-        </div>
-
-        <button class="add-to-cart">Add to Cart</button>
-
-        <p class="product-description" id="product-description">
-          Product description will be loaded here.
-          <span id="show-more-text" class="hidden"></span>
-        </p>
-        <a id="show-more">Show more</a>
+  <div class="product-page">
+    <div class="image-gallery">
+      <img id="main-image" src="" alt="Product Image" />
+      <div class="thumbnail-row" id="thumbnail-row">
+        <!-- Thumbnails visas här -->
       </div>
     </div>
+    <div class="product-info">
+      <h1 class="product-title" id="product-title">Product Name</h1>
+      <p class="price" id="product-price">$0</p>
 
-    <footer id="main-footer">
-      <!-- Main footer -->
-      <a href="./admin/admin.html">Admin</a>
-      <a href="./contact.html"> Contact us</a>
-    </footer>
+      <div class="size-options">
+        <label for="size">Size:</label>
+        <select id="size" name="size"></select>
+      </div>
 
-  </body>
+      <button class="add-to-cart">Add to Cart</button>
+
+      <p class="product-description" id="product-description">
+        Product description will be loaded here.
+        <span id="show-more-text" class="hidden"></span>
+      </p>
+      <a id="show-more">Show more</a>
+    </div>
+  </div>
+
+  <footer id="main-footer">
+    <!-- Main footer -->
+    <a href="./admin/admin.html">Admin</a>
+    <a href="./contact-page.html"> Contact us</a>
+  </footer>
+
+</body>
+
 </html>

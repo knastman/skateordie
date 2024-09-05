@@ -207,8 +207,6 @@ function getBasketInfo() {
 
   const total = basketProducts.map(i => i.priceSEK).reduce((t, c) => t + c, 0);
 
-  console.log(total);
-
   const basketInfo = {
     items: basket,
     length: basket.length,
