@@ -58,14 +58,33 @@ select {
     padding: 15px;
 }
 
+#infoContinue {
+    background-color: black;
+    padding: 15px;
+    border: none;
+    color: white;
+    margin-top: 30px;
+}
 
 
 
 
 
+.previousOrContinue {
+    display: flex;
+    justify-content: space-between;
+}
+
+.shippingButton {
+    background-color: black;
+    color: white;
+    padding: 15px;
+    border: none;
+}
 
 #shipping {
     display: none;
+    flex-direction: column;
 }
 
 #payment {

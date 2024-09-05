@@ -1,6 +1,6 @@
 import { products } from "../database/query.js";
 import RemoveButton from "./RemoveButton.js";
-import BuyButton from "./BuyButton.js";
+import AddToCartButton from "./addToCartButton.js";
 
 // apperance of basket items
 export function createBasketItem(item) {
@@ -20,7 +20,7 @@ export function createBasketItem(item) {
   `;
 
   //add the buybutton to the card
-  card.append(new BuyButton());
+  card.append(new AddToCartButton());
 
   // must exist but can be appended elsewhere within basketCard
   card.append(new RemoveButton()) 

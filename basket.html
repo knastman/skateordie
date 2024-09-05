@@ -7,6 +7,7 @@
     <script type="module" src="js/script.js"></script>
     <script type="module" src="js/basket/createBasketItem.js"></script>
     <script type="module" src="js/basket/continueButton.js"></script>
+    <script type="module" src="js/basket/previousButton.js"></script>
     <link rel="stylesheet" href="styles/basket.css">
     <title>Basket</title>
 </head>
@@ -68,8 +69,8 @@
                 <label for="zipcode">Delivery Zip Code</label>
                 <input type="text" id="zipcode" name="zipcode">
 
+                <p>Delivery Options</p>
                 <form id="deliveryForm">
-                    Delivery Options
                     <label for="delivery">
                         <input type="checkbox" id="delivery" name="delivery" placeholder="PostNord Service Point">
                         PostNord Service Point
@@ -80,8 +81,10 @@
                         PostNord Home Delivery
                     </label>
                 </form>
-                <button id="previous">Previous</button>
-                <button id="shippingContinue">Continue</button>
+                <div class="previousOrContinue">
+                    <button class="shippingPrevious shippingButton">Previous</button>
+                    <button class="shippingContinue shippingButton">Continue</button>
+                </div>
             </div>
 
             <div id="payment">
@@ -108,9 +111,10 @@
                         PayPal
                     </label>
                 </form>
-                <button id="previous">Previous</button>
-                <button id="paymentContinue">Continue</button>
-
+                <div class="previousOrContinue">
+                    <button class="paymentPrevious">Previous</button>
+                    <button class="paymentContinue">Continue</button>
+                </div>
             </div>
         </section>
 
