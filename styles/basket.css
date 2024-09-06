@@ -81,10 +81,6 @@ select {
     margin-top: 30px;
 }
 
-
-
-
-
 .previousOrContinue {
     display: flex;
     justify-content: space-between;
@@ -154,6 +150,31 @@ select {
     margin-top: 30px;
     border: 0.5px solid gray;
     width: 300px;
+}
+
+#basket {
+    box-sizing: border-box;
+}
+
+#basketWrapper {
+    display: flex;
+    flex-direction: column;
+}
+
+.basketCard {
+    display: flex;
+    flex-direction: row;
+    border: 1px solid rgb(207, 207, 207);
+}
+
+#basketImage {
+    width: 100px;
+}
+
+.basketInfo {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
 

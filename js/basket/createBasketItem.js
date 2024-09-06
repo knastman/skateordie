@@ -14,9 +14,11 @@ export function createBasketItem(item) {
   // **** CUSTOMIZABLES
   // customize card appearance freely
   card.innerHTML = `
-    <img src="${productInfo.images[0]}"/>
-    <p>${productInfo.name}</p>
-    <p>price: ${productInfo.priceSEK}kr</p>
+    <img src="${productInfo.images[0]}" id="basketImage"/>
+    <div class="basketInfo"
+      <p>${productInfo.name}</p>
+      <p>price: ${productInfo.priceSEK}kr</p>
+    </div>
   `;
 
   // must exist but can be appended elsewhere within basketCard
