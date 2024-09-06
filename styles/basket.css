@@ -6,12 +6,24 @@
 #info {
     display: flex;
     flex-direction: column;
-    width: 400px;
+    width: 550px;
 }
 
 .infoContact {
     display: flex;
     flex-direction: column;
+}
+
+.infoContact > h3 {
+    margin: 25px 0 25px 0;
+}
+
+.infoDelivery > h3 {
+    margin: 25px 0 25px 0;
+}
+
+#shipping > h3 {
+    margin: 25px 0 25px 0;
 }
 
 .infoDelivery {
@@ -25,7 +37,8 @@
 }
 
 #postalcode {
-    width: 157px;
+    border-right: 1px solid rgb(207, 207, 207);
+    width: 350px;
 }
 
 .checkoutHeader {
@@ -34,9 +47,11 @@
 }
 
 .header {
-    padding: 10px;
+    padding: 15px;
     background-color: rgb(241, 241, 241);
-    width: 111px;
+    width: 182px;
+    display: flex;
+    justify-content: center;
 }
 
 .headerInfo {
@@ -80,16 +95,83 @@ select {
     color: white;
     padding: 15px;
     border: none;
+    margin-top: 30px;
+    border: 0.5px solid gray;
+    width: 300px;
 }
 
 #shipping {
     display: none;
     flex-direction: column;
+    padding: 30px;
+    border: 1px solid rgb(218, 218, 218);
+    margin-top: 40px;
+    border-radius: 10px;
+    width: 550px;
+}
+
+#deliveryFee {
+    display: flex;
+    justify-content: space-between;
+    font-weight: 600;
+}
+
+#deliveryOne {
+    border-top: 1px solid rgb(207, 207, 207);
+    padding-top: 20px;
+}
+
+.delivery {
+    font-size: 30px;
 }
 
 #payment {
     display: none;
+    flex-direction: column;
+    width: 550px;
 }
+
+#paymentForm {
+    display: flex;
+    flex-direction: column;
+}
+
+#paymentForm > h3 {
+    margin: 25px 0 25px 0;
+}
+
+#paymentForm > label {
+    border: 1px solid rgb(207, 207, 207);
+    padding: 15px;
+    margin: 1px;
+}
+
+.paymentButton {
+    background-color: black;
+    color: white;
+    padding: 15px;
+    border: none;
+    margin-top: 30px;
+    border: 0.5px solid gray;
+    width: 300px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 /* #basketItem {
     flex: 0 0 auto; 

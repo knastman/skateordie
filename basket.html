@@ -54,7 +54,6 @@
 
                 <div class="infoDelivery">
                     <h3>DELIVERY ADDRESS</h3>
-                    <label for="country">Country</label>
                     <select name="country" id="country">
                         <option value="sweden">Sweden</option>
                         <option value="switzerland">Switzerland</option>
@@ -89,20 +88,32 @@
             </div>
 
             <div id="shipping">
-                <label for="zipcode">Delivery Zip Code</label>
+                <h3>DELIVERY ZIP CODE</h3>
                 <input type="text" id="zipcode" name="zipcode">
 
-                <p>Delivery Options</p>
+                <h3 class="deliveryBorder">DELIVERY OPTIONS</h3>
                 <form id="deliveryForm">
-                    <label for="delivery">
-                        <input type="checkbox" id="delivery" name="delivery" placeholder="PostNord Service Point">
-                        PostNord Service Point
-                    </label>
-                    <br>
-                    <label for="delivery">
-                        <input type="checkbox" id="delivery" name="delivery" placeholder="PostNord Home Delivery">
-                        PostNord Home Delivery
-                    </label>
+                    <div id="deliveryOne">
+                        <div id="deliveryFee">
+                            <label for="delivery">
+                                <input type="checkbox" id="delivery" name="delivery" placeholder="PostNord Service Point">
+                                PostNord Service Point
+                            </label>
+                            <p>Free</p>
+                        </div>
+                        <p>Tue, Sep 10 - Thu, Sep 12 (estimated)</p>
+                    </div>    
+                    <div id="deliveryTwo">
+                        <br>
+                        <div id="deliveryFee">
+                            <label for="delivery">
+                                <input type="checkbox" id="delivery" name="delivery" placeholder="PostNord Home Delivery">
+                                PostNord Home Delivery
+                            </label>
+                            <p>99kr</p>
+                        </div>
+                        <p>Tue, Sep 10 - Thu, Sep 12 (estimated)</p>
+                    </div>
                 </form>
                 <div class="previousOrContinue">
                     <button class="shippingPrevious shippingButton">Previous</button>
@@ -112,7 +123,7 @@
 
             <div id="payment">
                 <form id="paymentForm">
-                    Payment Options
+                    <h3>PAYMENT OPTIONS</h3>
                     <label for="swish">
                         <img src="" alt="">
                         <input type="checkbox" id="swish" name="swish">
@@ -135,8 +146,8 @@
                     </label>
                 </form>
                 <div class="previousOrContinue">
-                    <button class="paymentPrevious">Previous</button>
-                    <button class="paymentContinue">Continue</button>
+                    <button class="paymentPrevious paymentButton">Previous</button>
+                    <button class="paymentContinue paymentButton">Continue</button>
                 </div>
             </div>
         </section>
