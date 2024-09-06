@@ -27,8 +27,9 @@ export const basket = {
 
 // PRODUCT QUERIES
 function getAllProds() {
-  const adminCategories = JSON.parse(sessionStorage.getItem('products')) || [];
-  const products = [...productsDB, ...adminCategories];
+  const adminProducts = JSON.parse(sessionStorage.getItem('products')) || [];
+  const products = [...productsDB, ...adminProducts];
+  console.log(products)
 
   return products.map((prod) => formatProd(prod));
 }

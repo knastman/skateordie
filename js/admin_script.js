@@ -91,9 +91,12 @@ if(form) {
       name: formData.get('name'),
       description: formData.get('description'),
       priceSEK: parseFloat(formData.get('priceSEK')), 
+      category_id: Number(formData.get('category_id')),
       color: formData.get('color'),
       images: imagesArray.length === 1 ? imagesArray[0] : imagesArray
     };
+
+    console.log(newProduct)
   
     addNewProduct(newProduct); 
   });
