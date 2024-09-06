@@ -9,7 +9,6 @@ export function displayCategories() {
 
   //Get all categories from db
   const allCategories = categories.getAll();
-  console.log(allCategories);
 
 
   //Create nav with categories
@@ -55,7 +54,7 @@ export function displayCategories() {
         a.addEventListener('click', () => {
           console.log(subcatL3.id)
           localStorage.setItem('CategoryId', subcatL3.id)
-          window.location.href = "./../produktkort.html"
+          window.location.href = `${window.location.origin}/produktkort.html`
 
         })
       }
