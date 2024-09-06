@@ -1,4 +1,4 @@
-# Skate or Die - Template 
+# Skate or Die - Demo 
 ### Projekt i kursen "Agil Projektledning"
 
 #### Grupparbete - Medlemmar
@@ -44,7 +44,14 @@ Ni organiserar er agila process och ni bör utse en scrum master i gruppen som s
 * kunna titta på olika bilder som är kopplade till en produkt (Kund)
 * Bilderna som kunden ser skall vara i både liggande och stående format. (Kund)
 * kunna lägga de produkter som jag väljer i en varukorg när jag trycker på en knapp som heter ”Köp” på respektive produkt. (Kund)
-* kunna se information om en produkt för att kunna avgöra om jag vill köpa den eller inte och jag vill kunna lägga produkten i varukorg
+* kunna se information om en produkt för att kunna avgöra om jag vill köpa den eller inte och jag vill kunna lägga produkten i varukorg.
+
+#### Sprint 3 - KHC/und vill:
+* Användaren vill kunna söka på en produkt.
+* Avändaren vill se sökresultatet presenteras i en grid
+* Användaren vill kunna spara produkter i en wishlist
+* Användaren vill kunna gå in i sin wishlist och se vilka produkter jag har sparat
+* Användaren vill kunna dela med sig av produkter på Instagram
 
 
 #### Projekt på utbildningen:
