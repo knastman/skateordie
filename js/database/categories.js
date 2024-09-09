@@ -39,4 +39,14 @@ export default [
     name: "accessories",
     parent_id: 1,
   },
+  {
+    id: 9,
+    name: "Tops",
+    parent_id: 6,
+  },
+  {
+    id: 10,
+    name: "Sneakers",
+    parent_id: 7,
+  },
 ];

@@ -56,4 +56,99 @@ export default [
     ],
     created_at: "2024-09-02T12:00:00Z",
   },
+  {
+    id: 3,
+    name: "Signature Tank Top",
+    priceSEK: 800,
+    description: `
+      The Signature tank top is cut from a stretch organic cotton-blend in a slim silhouette. Signature A embroidery details the front in a contrasting shade
+      Article number: 3
+    `,
+    category_id: 9,
+    color: "Black",
+    sizes: ["XS", "S", "M", "L", "XL"],
+    images: [
+      "https://media.occtoo.com/a5fb66f4-a21f-4b8f-97f8-f0c65eaef780/dc3f9bae-b63b-5bc8-84c3-99ba340a1322/A0803002_4.jpg?format=xl",
+      "https://media.occtoo.com/a5fb66f4-a21f-4b8f-97f8-f0c65eaef780/f13f3641-c3fc-533c-ad04-18db83c7cc36/A0803002_5.jpg?format=xl",
+      "https://media.occtoo.com/a5fb66f4-a21f-4b8f-97f8-f0c65eaef780/9a88a185-4e03-54d0-a43f-502d5a68f14c/A0803002_7.jpg?format=xl",
+    ],
+    created_at: "2024-09-02T12:00:00Z",
+  },
+  {
+    id: 4,
+    name: "Dice Lo Sneaker",
+    priceSEK: 2500,
+    description: `
+      The Play jeans are cut from cotton-denim in a relaxed shape. They’re screen printed all over with our Signature A motif in three different shades.
+      The model is 187 cm / 6’2 ft and wears a size 31.
+      Article number: 4
+    `,
+    category_id: 10,
+    color: "White and",
+    sizes: ["39", "40", "41", "42", "43", "44", "45"],
+    images: [
+      "https://media.occtoo.com/a5fb66f4-a21f-4b8f-97f8-f0c65eaef780/046501a3-21ef-5d99-baa2-219902c0eb07/F1697003_CATEGORY.jpg?format=xl",
+      "https://media.occtoo.com/a5fb66f4-a21f-4b8f-97f8-f0c65eaef780/41221e1c-319c-5e41-8063-8769b70c2a24/F1697003_4.jpg?format=xl",
+      "https://media.occtoo.com/a5fb66f4-a21f-4b8f-97f8-f0c65eaef780/4ee8f359-7f5b-58e8-8a4a-327c26d782e1/F1697003_8.jpg?format=xl"
+    ],
+    created_at: "2024-09-02T12:00:00Z",
+  },
+  {
+    id: 4,
+    name: "Dice-A Sneaker",
+    priceSEK: 2600,
+    description: `
+      The Play jeans are cut from cotton-denim in a relaxed shape. They’re screen printed all over with our Signature A motif in three different shades.
+      The model is 187 cm / 6’2 ft and wears a size 31.
+      Article number: 4
+    `,
+    category_id: 10,
+    color: "White",
+    sizes: ["39", "40", "41", "42", "43", "44", "45"],
+    images: [
+      "https://media.occtoo.com/a5fb66f4-a21f-4b8f-97f8-f0c65eaef780/58d635ad-57c4-5b54-874f-229d5d4134ac/F2591002_CATEGORY.jpg?format=xl",
+      "https://media.occtoo.com/a5fb66f4-a21f-4b8f-97f8-f0c65eaef780/c4e8196f-b1e2-5e3a-9b6e-7de86f67e96f/F2591002_4.jpg?format=xl",
+      "https://media.occtoo.com/a5fb66f4-a21f-4b8f-97f8-f0c65eaef780/956e8006-e36d-5d11-a366-f18ab687edae/F2591002_6.jpg?format=xl",
+      "https://media.occtoo.com/a5fb66f4-a21f-4b8f-97f8-f0c65eaef780/5b0234b3-5d33-577f-9e87-421f05793784/F2591002_8.jpg?format=xl"
+    ],
+    created_at: "2024-09-02T12:00:00Z",
+  },
+  {
+    id: 5,
+    name: "Dice-A Sneaker",
+    priceSEK: 2600,
+    description: `
+      The Play jeans are cut from cotton-denim in a relaxed shape. They’re screen printed all over with our Signature A motif in three different shades.
+      The model is 187 cm / 6’2 ft and wears a size 31.
+      Article number: 4
+    `,
+    category_id: 10,
+    color: "White",
+    sizes: ["39", "40", "41", "42", "43", "44", "45"],
+    images: [
+      "https://media.occtoo.com/a5fb66f4-a21f-4b8f-97f8-f0c65eaef780/9864daad-fb7c-5426-ada5-55e995610e75/F1739002_CATEGORY.jpg?format=xl",
+      "https://media.occtoo.com/a5fb66f4-a21f-4b8f-97f8-f0c65eaef780/2769f6e9-62ae-534d-bd70-8d7e2d37dffa/F1739002_4.jpg?format=xl",
+      "https://media.occtoo.com/a5fb66f4-a21f-4b8f-97f8-f0c65eaef780/ac752adb-ae3a-51d5-bc79-7a1a42d86078/F1739002_8.jpg?format=xl",
+    ],
+    created_at: "2024-09-02T12:00:00Z",
+  },
+  {
+    id: 6,
+    name: "Château Axel T-Shirt",
+    priceSEK: 1300,
+    description: `
+      The Château Axel T-shirt is cut from organic cotton in an oversized silhouette. Our seasonal branding is screen-printed at the chest..
+      The model is 187 cm / 62 ft and wears a size M.
+      Article number: 5
+    `,
+    category_id: 4,
+    color: "blue",
+    sizes: ["XS", "S", "M", "L", "XL"],
+    images: [
+      "https://media.occtoo.com/a5fb66f4-a21f-4b8f-97f8-f0c65eaef780/f8cb9be3-d21e-504b-a5f6-cc2ae04d0e85/A2608001_4.jpg?format=xl",
+      "https://media.occtoo.com/a5fb66f4-a21f-4b8f-97f8-f0c65eaef780/b5989b0b-a58c-59cc-9c83-faa79ab9b40d/A2608001_5.jpg?format=xl",
+      "https://media.occtoo.com/a5fb66f4-a21f-4b8f-97f8-f0c65eaef780/90310b39-4e64-520a-a407-0e00c02ed737/A2608001_7.jpg?format=xl"
+    ],
+    created_at: "2024-09-02T12:00:00Z",
+  },
 ];
