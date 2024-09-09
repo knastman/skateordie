@@ -41,12 +41,7 @@ function listAllProducts() {
             // CHOOSING A PRODUCT AND BEING SENT TO THE PRODUCTPAGE
 
             productCard.addEventListener('click', () => {
-                console.log("product id is " + product.id)
-                console.log("The product category id is " + product.category_id)
-
-                localStorage.setItem('allProducts', product.id)
-                localStorage.setItem('allproducts', product.category_id)
-                window.location.href = `${window.location.origin}/produktsida.html`;
+                window.location.href = `${window.location.origin}/produktsida.html?id=${product.id}`;
             })
         };
     });
