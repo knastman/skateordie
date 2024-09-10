@@ -27,14 +27,13 @@ export const basket = {
 
 export const wishlist = {
   toggle: toggleWishlist,
-  get: getWishlist
+  get: getWishlistInfo
 }
 
 // PRODUCT QUERIES
 function getAllProds() {
   const adminProducts = JSON.parse(sessionStorage.getItem('products')) || [];
   const products = [...productsDB, ...adminProducts];
-  console.log(products)
 
   return products.map((prod) => formatProd(prod));
 }
@@ -127,8 +126,6 @@ function allCats() {
   const adminCategories = JSON.parse(sessionStorage.getItem('categories')) || [];
   const categories = [...categoriesDB, ...adminCategories];
 
-  // console.log(adminCategories)
-
   return categories
 }
 
@@ -188,12 +185,8 @@ function removeFromBasket(id) {
   // get previous basket
   const basket = JSON.parse(sessionStorage.getItem('basket')) || [];
 
-  console.log(id, basket)
-  
   const updatedBasket = basket.filter(i => i.id !== Number(id));
   
-  console.log(id, updatedBasket);
-
   //update basket
   sessionStorage.setItem('basket', JSON.stringify(updatedBasket));
 
@@ -258,6 +251,17 @@ function getWishlist() {
   const wishlist = JSON.parse(localStorage.getItem('wishlist')) || [];
 
   return wishlist
+}
+
+function getWishlistInfo() {
+  const wishlist = getWishlist();
+  const products = getAllProds();
+
+  
+  const wishlistProductInfo = wishlist.map(i => products.find(p => p.id == i));
+
+  return wishlistProductInfo;
+  
 }
 
 // FOR PROGRAMMER CONVENIENCE
