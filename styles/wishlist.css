@@ -1,0 +1,69 @@
+#wishlist-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+.wishlist-productcard {
+    display: flex;
+    flex-direction: row;
+    box-sizing: border-box;
+    width: 500px;
+    height: 130px;
+}
+
+.wishlist-image {
+    background-color: lightblue;
+    width: 100px;
+}
+
+.wishlist-info {
+    display: flex;
+    flex-direction: column;
+}
+
+.wishlist-options {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    margin-top: auto; 
+}
+
+.wishlist-unlike,
+#wishlist-productsize,
+.wishlist-add-basket {
+    background-color: transparent;
+}
+
+.wishlist-unlike {
+    width: 50px;
+    height: 50px;
+    border: 1px solid rgb(217, 217, 217);
+    border-right: none;
+}
+
+#wishlist-productsize {
+    width: 150px;
+    border: 1px solid rgb(217, 217, 217);
+    border-right: none;
+}
+
+.wishlist-add-basket {
+    width: 200px;
+    border: 1px solid rgb(217, 217, 217);
+}
+
+.wishlist-name-prize {
+    display: flex;
+    justify-content: space-between;
+    width: 398px;
+    height: 80px;
+    border: 1px solid rgb(217, 217, 217);
+    border-bottom: none;
+}
+
+.wishlist-productname,
+.wishlist-prize {
+    margin: 20px 20px 0 20px;
+}
+
