@@ -36,7 +36,7 @@ function listAllProducts() {
                         share
                     </span>
                     <div style="margin-left: 5px; font-size: 12px;"> Share </div> 
-                    <div class="dropDown"> <i class="fa-regular fa-copy copy-icon"></i> Copy link</div> 
+                    <button class="dropDown"> <i class="fa-regular fa-copy copy-icon"></i> Copy link</button> 
                 </div>
             </div>`;
 
