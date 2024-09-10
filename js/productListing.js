@@ -21,15 +21,29 @@ function listAllProducts() {
             const productCardImg = document.createElement('img');
             productCardImg.src = product.images[0];
 
+            
+            const shareContainer = document.createElement('div');
+            shareContainer.classList.add('shareContainer');
 
             const productCardText = document.createElement('p');
             productCardText.classList.add('productCardText');
-            productCard.append(productCardImg, productCardText);
+            productCard.append(productCardImg, productCardText, shareContainer);
 
+            shareContainer.innerHTML = `
+            <div class="shareContent">
+                <div class="shareBox"> 
+                    <span class="material-symbols-outlined">
+                        share
+                    </span>
+                    <div style="margin-left: 5px; font-size: 12px;"> Share </div> 
+                    <div class="dropDown"> <i class="fa-regular fa-copy copy-icon"></i> Copy link</div> 
+                </div>
+            </div>`;
 
             productCardText.innerHTML = `
             <p>${product.name}</p>
-            <p>${product.priceSEK + " SEK"}</p>`;
+            <p>${product.priceSEK + " SEK"}</p>
+                `;
 
             productCard.addEventListener('mouseover', () => {
                 productCardImg.src = product.images[1];
