@@ -25,11 +25,15 @@ export const basket = {
   getInfo: getBasketInfo
 }
 
+export const wishlist = {
+  toggle: toggleWishlist,
+  get: getWishlistInfo
+}
+
 // PRODUCT QUERIES
 function getAllProds() {
   const adminProducts = JSON.parse(sessionStorage.getItem('products')) || [];
   const products = [...productsDB, ...adminProducts];
-  console.log(products)
 
   return products.map((prod) => formatProd(prod));
 }
@@ -122,8 +126,6 @@ function allCats() {
   const adminCategories = JSON.parse(sessionStorage.getItem('categories')) || [];
   const categories = [...categoriesDB, ...adminCategories];
 
-  // console.log(adminCategories)
-
   return categories
 }
 
@@ -183,12 +185,8 @@ function removeFromBasket(id) {
   // get previous basket
   const basket = JSON.parse(sessionStorage.getItem('basket')) || [];
 
-  console.log(id, basket)
-  
   const updatedBasket = basket.filter(i => i.id !== Number(id));
   
-  console.log(id, updatedBasket);
-
   //update basket
   sessionStorage.setItem('basket', JSON.stringify(updatedBasket));
 
@@ -218,6 +216,53 @@ function getBasketInfo() {
   return basketInfo;
 }
 
+// WISHLIST
+function toggleWishlist(product_id) {
+  const wishlist = getWishlist();
+
+  if (wishlist.includes(product_id)) {
+    removeFromWishlist(product_id);
+    return false;
+
+  } else {
+    addToWishlist(product_id)
+    return true;
+  }
+
+}
+
+function addToWishlist(product_id) {
+  const wishlist = getWishlist();
+
+  wishlist.push(Number(product_id))
+
+  localStorage.setItem('wishlist', JSON.stringify(wishlist));
+}
+
+function removeFromWishlist(product_id) {
+  const wishlist = getWishlist();
+
+  const updatedWishlist = wishlist.filter(i => i !== Number(product_id));
+
+  localStorage.setItem('wishlist', JSON.stringify(updatedWishlist))
+}
+
+function getWishlist() {
+  const wishlist = JSON.parse(localStorage.getItem('wishlist')) || [];
+
+  return wishlist
+}
+
+function getWishlistInfo() {
+  const wishlist = getWishlist();
+  const products = getAllProds();
+
+  
+  const wishlistProductInfo = wishlist.map(i => products.find(p => p.id == i));
+
+  return wishlistProductInfo;
+  
+}
 
 // FOR PROGRAMMER CONVENIENCE
 function formatProd(product) {
