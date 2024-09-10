@@ -25,6 +25,11 @@ export const basket = {
   getInfo: getBasketInfo
 }
 
+export const wishlist = {
+  toggle: toggleWishlist,
+  get: getWishlist
+}
+
 // PRODUCT QUERIES
 function getAllProds() {
   const adminProducts = JSON.parse(sessionStorage.getItem('products')) || [];
@@ -218,6 +223,42 @@ function getBasketInfo() {
   return basketInfo;
 }
 
+// WISHLIST
+function toggleWishlist(product_id) {
+  const wishlist = getWishlist();
+
+  if (wishlist.includes(product_id)) {
+    removeFromWishlist(product_id);
+    return false;
+
+  } else {
+    addToWishlist(product_id)
+    return true;
+  }
+
+}
+
+function addToWishlist(product_id) {
+  const wishlist = getWishlist();
+
+  wishlist.push(Number(product_id))
+
+  localStorage.setItem('wishlist', JSON.stringify(wishlist));
+}
+
+function removeFromWishlist(product_id) {
+  const wishlist = getWishlist();
+
+  const updatedWishlist = wishlist.filter(i => i !== Number(product_id));
+
+  localStorage.setItem('wishlist', JSON.stringify(updatedWishlist))
+}
+
+function getWishlist() {
+  const wishlist = JSON.parse(localStorage.getItem('wishlist')) || [];
+
+  return wishlist
+}
 
 // FOR PROGRAMMER CONVENIENCE
 function formatProd(product) {
