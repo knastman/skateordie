@@ -8,7 +8,6 @@ const urlParams = new URLSearchParams(window.location.search);
 const productId = urlParams.get('id'); 
 const allProducts = getAllProducts();
 const product = allProducts.find(p => p.id == productId);
-
 const productWrapper = document.querySelector(".product-page")
 const mainImage = document.getElementById("main-image");
 const thumbnails = document.getElementById("thumbnail-row");
@@ -19,6 +18,7 @@ const showMoreText = document.getElementById("show-more-text");
 const sizeSelect = document.getElementById("size");
 
 productWrapper.id = product.id;
+
 
 // Update product details
 mainImage.src = product.images[0];

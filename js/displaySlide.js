@@ -16,7 +16,8 @@ async function displaySlide() {
       slideImg.addEventListener("click", () => {
         localStorage.setItem('allProducts', newProducts.id)
         localStorage.setItem('allproducts', newProducts.category_id)
-        window.location.href = `${window.location.origin}/produktsida.html`
+        window.location.href = `${window.location.origin}/produktsida.html?id=${newProducts.id}`;
+
       })
     }
   });
