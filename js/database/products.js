@@ -94,7 +94,7 @@ export default [
     created_at: "2024-09-02T12:00:00Z",
   },
   {
-    id: 4,
+    id: 5,
     name: "Dice-A Sneaker",
     priceSEK: 2600,
     description: `
@@ -114,7 +114,7 @@ export default [
     created_at: "2024-09-02T12:00:00Z",
   },
   {
-    id: 5,
+    id: 6,
     name: "Dice-A Sneaker",
     priceSEK: 2600,
     description: `
@@ -133,7 +133,7 @@ export default [
     created_at: "2024-09-02T12:00:00Z",
   },
   {
-    id: 6,
+    id: 7,
     name: "Château Axel T-Shirt",
     priceSEK: 1300,
     description: `

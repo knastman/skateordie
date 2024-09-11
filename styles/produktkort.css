@@ -68,10 +68,10 @@
     position: relative; 
 }
 
-.dropDown {
+.dropDownBtn {
     display: none; 
     position: absolute; 
-    top: 110%; 
+    top: 100%; 
     right: -40px; 
     background-color: white;
     border-radius: 10px;
@@ -87,11 +87,11 @@
     font-size: 16px;
 }
 
-.shareBox:hover .dropDown {
+.shareBox:hover .dropDownBtn {
     display: block; 
 }
 
-.dropDown:hover {
+.dropDownBtn:hover {
     display: block; 
 }
 
