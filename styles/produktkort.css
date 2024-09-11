@@ -41,3 +41,24 @@
 .productCardText p {
     margin: 0;
 }
+
+.wishlist-icon {
+    width: 2rem;
+    height: 2rem;
+    margin-left: auto;
+    border: none;
+    background-color: transparent;
+}
+
+.wishlist-icon:hover {
+    cursor: pointer;
+    /* background-color: pink; */
+}
+
+.wishlist-icon:active {
+    background-color: rgb(251, 127, 148);
+}
+
+.fa-heart {
+    color: pink;
+}
