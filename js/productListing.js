@@ -25,7 +25,7 @@ function listAllProducts() {
             const wishlistButton = document.createElement("button");
             wishlistButton.classList.add('wishlist-icon')
             // wishlistButton.innerHTML = `<i class="fa-regular fa-heart fa-lg" class="wishlist-icon"></i>`
-            wishlistButton.innerHTML = `<i class="fa-solid fa-heart fa-lg" class="wishlist-icon"></i>`
+            wishlistButton.innerHTML = `<i class="fa-regular fa-heart fa-lg" ></i>`
 
 
 
@@ -68,7 +68,8 @@ function listAllProducts() {
                     window.location.href = `${window.location.origin}/produktsida.html`;
                 }
                 if (event.target.closest(".wishlist-icon")) {
-                    console.log("test")
+                    wishlistButton.innerHTML = `<i class="fa-solid fa-heart fa-lg" ></i>`;
+                    console.log(product.id)
                 }
 
             })

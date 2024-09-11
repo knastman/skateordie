@@ -43,8 +43,8 @@
 }
 
 .wishlist-icon {
-    width: 2rem;
-    height: 2rem;
+    display: block;
+    padding: 0.3rem;
     margin-left: auto;
     border: none;
     background-color: transparent;
@@ -55,10 +55,15 @@
     /* background-color: pink; */
 }
 
-.wishlist-icon:active {
+/* .wishlist-icon:active {
     background-color: rgb(251, 127, 148);
-}
+} */
 
-.fa-heart {
+/* .fa-heart {
     color: pink;
+} */
+
+.wishlist-icon-header {
+    height: auto;
+    background-color: transparent;
 }
