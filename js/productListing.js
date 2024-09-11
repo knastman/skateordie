@@ -34,10 +34,27 @@ function listAllProducts() {
             productCard.append(wishlistButton, productCardImg, productCardText);
 
 
+            const shareContainer = document.createElement('div');
+            shareContainer.classList.add('shareContainer');
+
+
+            productCard.append(wishlistButton, productCardImg, productCardText, shareContainer);
+
+            shareContainer.innerHTML = `
+            <div class="shareContent">
+                <div class="shareBox"> 
+                    <span class="material-symbols-outlined">
+                        share
+                    </span>
+                    <div style="margin-left: 5px; font-size: 12px;"> Share </div> 
+                    <button class="dropDown"> <i class="fa-regular fa-copy copy-icon"></i> Copy link</button> 
+                </div>
+            </div>`;
 
             productCardText.innerHTML = `
             <p>${product.name}</p>
-            <p>${product.priceSEK + " SEK"}</p>`;
+            <p>${product.priceSEK + " SEK"}</p>
+                `;
 
             productCard.addEventListener('mouseover', (event) => {
                 if (event.target == productCardImg) {
@@ -60,18 +77,13 @@ function listAllProducts() {
 
             productCard.addEventListener('click', (event) => {
                 if (event.target == productCardImg) {
-                    console.log("product id is " + product.id)
-                    console.log("The product category id is " + product.category_id)
+                    window.location.href = `${window.location.origin}/produktsida.html?id=${product.id}`;
 
-                    localStorage.setItem('allProducts', product.id)
-                    localStorage.setItem('allproducts', product.category_id)
-                    window.location.href = `${window.location.origin}/produktsida.html`;
                 }
                 if (event.target.closest(".wishlist-icon")) {
                     wishlistButton.innerHTML = `<i class="fa-solid fa-heart fa-lg" ></i>`;
                     console.log(product.id)
                 }
-
             })
         };
     });
