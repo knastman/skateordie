@@ -67,7 +67,7 @@ function listAllProducts() {
                     localStorage.setItem('allproducts', product.category_id)
                     window.location.href = `${window.location.origin}/produktsida.html`;
                 }
-                if (event.target == wishlistButton || wishlistButton.innerHTML) {
+                if (event.target.closest(".wishlist-icon")) {
                     console.log("test")
                 }
 
