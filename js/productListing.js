@@ -1,5 +1,6 @@
-import { products } from "./database/query.js";
+import { products, wishlist } from "./database/query.js";
 import { getAllProducts } from "./database/query.js";
+
 
 const categoryId = localStorage.getItem('CategoryId');
 
@@ -10,6 +11,8 @@ const productList = document.querySelector("#productList");
 
 
 function listAllProducts() {
+    const wishlistItems = wishlist.get()
+    console.log(wishlistItems)
 
     allProducts.forEach((product) => {
         if (product.images && product.images.length > 0) {
@@ -22,10 +25,21 @@ function listAllProducts() {
             const productCardImg = document.createElement('img');
             productCardImg.src = product.images[0];
 
-            const wishlistButton = document.createElement("button");
+
+            const wishlistButton = document.createElement("div");
             wishlistButton.classList.add('wishlist-icon')
-            // wishlistButton.innerHTML = `<i class="fa-regular fa-heart fa-lg" class="wishlist-icon"></i>`
-            wishlistButton.innerHTML = `<i class="fa-regular fa-heart fa-lg" ></i>`
+            if (wishlistItems.find(i => i.id == product.id)) {
+                wishlistButton.innerHTML = `<i class="fa-solid fa-heart fa-lg"></i>`
+            } else {
+                wishlistButton.innerHTML = `<i class="fa-regular fa-heart fa-lg"></i>`
+
+            }
+
+
+
+
+
+
 
 
 
@@ -78,11 +92,15 @@ function listAllProducts() {
             productCard.addEventListener('click', (event) => {
                 if (event.target == productCardImg) {
                     window.location.href = `${window.location.origin}/produktsida.html?id=${product.id}`;
-
                 }
                 if (event.target.closest(".wishlist-icon")) {
-                    wishlistButton.innerHTML = `<i class="fa-solid fa-heart fa-lg" ></i>`;
-                    console.log(product.id)
+                    const itemIsInWishlist = wishlist.toggle(product.id);
+                    if (itemIsInWishlist) {
+                        wishlistButton.innerHTML = `<i class="fa-solid fa-heart fa-lg" ></i>`;
+                    } else {
+                        wishlistButton.innerHTML = `<i class="fa-regular fa-heart fa-lg" ></i>`;
+
+                    }
                 }
             })
         };
