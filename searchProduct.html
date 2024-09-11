@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="styles/produktsida.css" rel="stylesheet" />
+  <script type="module" src="js/script.js"></script>
+  <script type="module" src="js/filterProducts.js"></script>
+   <!--Google fonts-->
+   <link rel="preconnect" href="https://fonts.googleapis.com" />
+   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+   <script src="https://kit.fontawesome.com/9605ade1b0.js" crossorigin="anonymous"></script>
+   <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap"
+     rel="stylesheet" />
+ 
+   <title>Skate or Die</title>
+</head>
+<body>
+  
+  <header id="main-header">
+    <!-- Main header -->
+    <div id="logo"><a href="./">LOGO</a></div>
+
+    <nav class="product-navigation">
+      <ul id="main-level">
+        <!-- Product nav here (dynamic) -->
+      </ul>
+    </nav>
+
+    <form class="search-field">
+      <input type="text" id="search-input" placeholder="Search product">
+      <button id="searchButton"><i class="fa-solid fa-magnifying-glass fa-lg"></i></button>
+    </form>
+    <a href="./basket.html">CART</a>
+
+  </header>
+  <main>
+    <h1>Search for product</h1>
+    <p id="searchResults"></p>
+    <div id="searchProduct">
+    </div>
+    <!-- Main content -->
+    <img src="/images/" alt="" />
+  </main>
+</body>
+</html>
