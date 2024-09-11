@@ -52,6 +52,7 @@ p:nth-last-child(1){
 
 
 #main-footer{
+  margin-top: 50px;
   background-color: rgb(250 237 188);
   padding:10px;
 }

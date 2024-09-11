@@ -41,3 +41,65 @@
 .productCardText p {
     margin: 0;
 }
+
+.shareContainer {
+    width: 100%;
+}
+
+.shareContent {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    position: relative; 
+}
+
+.shareContent > span,
+.shareContent > div {
+    background-color:lightgrey;
+    height: 30px;
+    border-radius: 15px;
+    width: 80px;
+}
+
+.shareBox {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative; 
+}
+
+.dropDown {
+    display: none; 
+    position: absolute; 
+    top: 110%; 
+    right: -40px; 
+    background-color: white;
+    border-radius: 10px;
+    z-index: 10; 
+    width: 150px;
+    height: 40px;
+    text-align: center;
+    padding: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1),
+    0 1px 3px rgba(0, 0, 0, 0.08);
+    border:none;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.shareBox:hover .dropDown {
+    display: block; 
+}
+
+.dropDown:hover {
+    display: block; 
+}
+
+.copy-icon{
+    margin-right: 5px;
+    font-size: 18px;
+}
+
+.material-symbols-outlined{
+    font-size: 20px;
+}
