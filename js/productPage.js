@@ -1,11 +1,13 @@
-import { products } from "./database/query.js";
+import { getAllProducts } from "./database/query.js";
+
 
 // get url params
 const urlParams = new URLSearchParams(window.location.search);
 
 // Fetch product data by ID or index
 const productId = urlParams.get('id'); 
-const product = products.getById(productId);
+const allProducts = getAllProducts();
+const product = allProducts.find(p => p.id == productId);
 
 const productWrapper = document.querySelector(".product-page")
 const mainImage = document.getElementById("main-image");
