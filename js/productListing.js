@@ -64,22 +64,24 @@ function listAllProducts() {
             <p>${product.priceSEK + " SEK"}</p>
                 `;
 
+            const dropDown = document.querySelectorAll('.dropDownBtn');
+
+            dropDown.forEach((dropDownBtn) => {
+                dropDownBtn.addEventListener('click', event => {
+                    event.preventDefault();
+                    event.stopPropagation();
+                    const productId = dropDownBtn.getAttribute('data-product-id');
+                    copyUrl(productId);  
+                });
+            });
+                
             productCard.addEventListener('mouseover', (event) => {
                 if (event.target == productCardImg) {
                     productCardImg.src = product.images[1];
                 }
 
-                const dropDown = document.querySelectorAll('.dropDownBtn');
-
-                dropDown.forEach((dropDownBtn) => {
-                    dropDownBtn.addEventListener('click', event => {
-                        event.preventDefault();
-                        event.stopPropagation();
-                        const productId = dropDownBtn.getAttribute('data-product-id');
-                        copyUrl(productId);  
-                    });
-                });
             })
+
             productCard.addEventListener('mouseout', () => {
                 productCardImg.src = product.images[0];
             })
@@ -93,7 +95,6 @@ function listAllProducts() {
             // })
 
             // CHOOSING A PRODUCT AND BEING SENT TO THE PRODUCTPAGE
-
             productCard.addEventListener('click', (event) => {
                 if (event.target == productCardImg) {
                     window.location.href = `${window.location.origin}/produktsida.html?id=${product.id}`;
