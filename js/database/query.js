@@ -32,7 +32,7 @@ export const wishlist = {
 
 // PRODUCT QUERIES
 function getAllProds() {
-  const adminProducts = JSON.parse(sessionStorage.getItem('products')) || [];
+  const adminProducts = JSON.parse(localStorage.getItem('products')) || [];
   const products = [...productsDB, ...adminProducts];
 
   return products.map((prod) => formatProd(prod));
@@ -113,17 +113,17 @@ function addNewCat(userCat) {
   // POTENTIAL TODO: replace with firebase comms
 
   // get previously added categories
-  let prevCats = JSON.parse(sessionStorage.getItem("categories")) || [];
+  let prevCats = JSON.parse(localStorage.getItem("categories")) || [];
 
   prevCats.push(newCat);
   
-  sessionStorage.setItem("categories", JSON.stringify(prevCats));
+  localStorage.setItem("categories", JSON.stringify(prevCats));
 
 }
 
 // all user and pre added cats
 function allCats() {
-  const adminCategories = JSON.parse(sessionStorage.getItem('categories')) || [];
+  const adminCategories = JSON.parse(localStorage.getItem('categories')) || [];
   const categories = [...categoriesDB, ...adminCategories];
 
   return categories
@@ -133,14 +133,14 @@ function allCats() {
 // Functionality for adding products
 
 function allStoredProducts() {
-  return JSON.parse(sessionStorage.getItem("products")) || [];
+  return JSON.parse(localStorage.getItem("products")) || [];
 }
 
-// Funktion för att hämta alla produkter, både från databasen och sessionStorage
+// Funktion för att hämta alla produkter, både från databasen och localStorage
 export function getAllProducts() {
   const dbProducts = products.getAll(); 
 
-  // Hämta produkter från sessionStorage
+  // Hämta produkter från localStorage
   const storedProducts = allStoredProducts();
 
   // Sammanfoga de två listorna
@@ -160,14 +160,14 @@ export function addNewProduct(userProduct) {
   };
 
   const updatedProducts = [...allStoredProducts(), newProduct];
-  sessionStorage.setItem("products", JSON.stringify(updatedProducts));
+  localStorage.setItem("products", JSON.stringify(updatedProducts));
 }
 
 // BASKET
 function addToBasket(product_id) {
 
   // get previous basket
-  const basket = JSON.parse(sessionStorage.getItem('basket')) || [];
+  const basket = JSON.parse(localStorage.getItem('basket')) || [];
 
   // add new item
 
@@ -177,31 +177,31 @@ function addToBasket(product_id) {
   });
 
   // update basket
-  sessionStorage.setItem('basket', JSON.stringify(basket));
+  localStorage.setItem('basket', JSON.stringify(basket));
 }
 
 
 function removeFromBasket(id) {
   // get previous basket
-  const basket = JSON.parse(sessionStorage.getItem('basket')) || [];
+  const basket = JSON.parse(localStorage.getItem('basket')) || [];
 
   const updatedBasket = basket.filter(i => i.id !== Number(id));
   
   //update basket
-  sessionStorage.setItem('basket', JSON.stringify(updatedBasket));
+  localStorage.setItem('basket', JSON.stringify(updatedBasket));
 
 }
 
 function getBasket() {
   // get previous basket
-  const basket = JSON.parse(sessionStorage.getItem('basket')) || [];
+  const basket = JSON.parse(localStorage.getItem('basket')) || [];
 
   return basket;
   
 }
 
 function getBasketInfo() {
-  const basket = JSON.parse(sessionStorage.getItem('basket')) || [];
+  const basket = JSON.parse(localStorage.getItem('basket')) || [];
 
   const basketProducts = basket.map(i => getProdById(i.product_id));
 
