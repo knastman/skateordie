@@ -35,14 +35,6 @@ function listAllProducts() {
 
             }
 
-
-
-
-
-
-
-
-
             const productCardText = document.createElement('p');
             productCardText.classList.add('productCardText');
             productCard.append(wishlistButton, productCardImg, productCardText);
@@ -61,7 +53,9 @@ function listAllProducts() {
                         share
                     </span>
                     <div style="margin-left: 5px; font-size: 12px;"> Share </div> 
-                    <button class="dropDown"> <i class="fa-regular fa-copy copy-icon"></i> Copy link</button> 
+                    <button class="dropDownBtn" data-product-id="${product.id}"> 
+                    <i class="fa-regular fa-copy copy-icon"></i> Copy link
+                </button>  
                 </div>
             </div>`;
 
@@ -70,11 +64,24 @@ function listAllProducts() {
             <p>${product.priceSEK + " SEK"}</p>
                 `;
 
+            const dropDown = document.querySelectorAll('.dropDownBtn');
+
+            dropDown.forEach((dropDownBtn) => {
+                dropDownBtn.addEventListener('click', event => {
+                    event.preventDefault();
+                    event.stopPropagation();
+                    const productId = dropDownBtn.getAttribute('data-product-id');
+                    copyUrl(productId);  
+                });
+            });
+                
             productCard.addEventListener('mouseover', (event) => {
                 if (event.target == productCardImg) {
                     productCardImg.src = product.images[1];
                 }
+
             })
+
             productCard.addEventListener('mouseout', () => {
                 productCardImg.src = product.images[0];
             })
@@ -88,7 +95,6 @@ function listAllProducts() {
             // })
 
             // CHOOSING A PRODUCT AND BEING SENT TO THE PRODUCTPAGE
-
             productCard.addEventListener('click', (event) => {
                 if (event.target == productCardImg) {
                     window.location.href = `${window.location.origin}/produktsida.html?id=${product.id}`;
@@ -107,6 +113,14 @@ function listAllProducts() {
     });
 }
 listAllProducts();
+
+function copyUrl(productId) {
+    const productUrl = `${window.location.origin}/produktsida.html?id=${productId}`;
+    
+    navigator.clipboard.writeText(productUrl).then(() => {
+        alert("Link successfully copied!");
+    })
+}
 
 
 

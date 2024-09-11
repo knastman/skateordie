@@ -94,11 +94,11 @@
     position: relative;
 }
 
-.dropDown {
-    display: none;
-    position: absolute;
-    top: 110%;
-    right: -40px;
+.dropDownBtn {
+    display: none; 
+    position: absolute; 
+    top: 100%; 
+    right: -40px; 
     background-color: white;
     border-radius: 10px;
     z-index: 10;
@@ -113,12 +113,12 @@
     font-size: 16px;
 }
 
-.shareBox:hover .dropDown {
-    display: block;
+.shareBox:hover .dropDownBtn {
+    display: block; 
 }
 
-.dropDown:hover {
-    display: block;
+.dropDownBtn:hover {
+    display: block; 
 }
 
 .copy-icon {
