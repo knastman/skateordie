@@ -66,6 +66,13 @@
 .wishlist-icon-header {
     height: auto;
     background-color: transparent;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.wishlist-icon-header:hover {
+    cursor: pointer;
 }
 
 .shareContainer {

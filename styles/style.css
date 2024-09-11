@@ -29,6 +29,10 @@ img {
   vertical-align: middle;
 }
 
+#logo {
+  font-weight: 700;
+}
+
 /* #hero {
   background-image: url(../images/hero.jpg);
 } */
