@@ -152,6 +152,8 @@ p:nth-last-child(1){
     margin-left: 10px;
 }
 
+
+/* Orginal
 .add-to-cart {
     background-color: #049bff;
     color: white;
@@ -167,6 +169,25 @@ p:nth-last-child(1){
 .add-to-cart:hover {
     background-color: #066db2;
     box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+}
+*/
+
+/* Fix för att följa samma gränssnitt överallt tex wishlist add to basket etc */
+.add-to-cart {
+  background-color: #000;
+  color: white;
+  border: none;
+  padding: 15px;
+  font-size: 18px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+  margin-bottom: 20px;
+}
+
+.add-to-cart:hover {
+  background-color: #fff;
+  color:#000;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
 }
 
 .product-description {
