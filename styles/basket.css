@@ -52,6 +52,7 @@
     width: 182px;
     display: flex;
     justify-content: center;
+    font-weight: 700;
 }
 
 .headerInfo {
