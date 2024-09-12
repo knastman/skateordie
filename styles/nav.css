@@ -112,12 +112,16 @@ a {
   font-weight: 700;
 }
 
+
+/******************************************************************
+Search
+*******************************************************************/
+
 .search-field{
   width: 20%;
   display: flex;
   justify-content: center;
 }
-
 
 #search-input{
    margin-top: 5px; 
