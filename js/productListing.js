@@ -1,6 +1,6 @@
 import { products, wishlist } from "./database/query.js";
 import { getAllProducts } from "./database/query.js";
-
+import { displayWishlist } from "./wishlist-display.js";
 
 const categoryId = localStorage.getItem('CategoryId');
 
@@ -10,7 +10,7 @@ const allProducts = savedCategoryId || getAllProducts();
 const productList = document.querySelector("#productList");
 
 
-function listAllProducts() {
+export function listAllProducts() {
     const wishlistItems = wishlist.get()
     console.log(wishlistItems)
 
@@ -107,6 +107,7 @@ function listAllProducts() {
                         wishlistButton.innerHTML = `<i class="fa-regular fa-heart fa-lg" ></i>`;
 
                     }
+                    displayWishlist(); //uppdatera önskelistan
                 }
             })
         };
