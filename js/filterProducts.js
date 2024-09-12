@@ -49,6 +49,7 @@ if (window.location.href.includes('/searchProduct.html')) {
 
         const productCardImg = document.createElement('img');
         productCardImg.src = product.images[0];
+        productCardImg.classList.add("productCardImg")
 
         const shareContainer = document.createElement('div');
         shareContainer.classList.add('shareContainer');
