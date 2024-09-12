@@ -39,11 +39,12 @@ export function displayWishlist() {
                         <option value="size">SIZE</option>
                         <option value="onesize">ONESIZE</option>
                     </select>
-                    <button class="wishlist-add-basket">ADD TO BAG</button>
+                    <div class="wishlist-add-basket" id="${productData.id}">
+                      <button class="add-to-cart">Add to Cart</button>
+                    </div>
                 </div>
                 </div>
             `;
-
             wishlistWrapper.appendChild(productCard);
 
             productCard.querySelector('.wishlist-unlike').addEventListener('click', () => {
