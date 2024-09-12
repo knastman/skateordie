@@ -129,3 +129,8 @@
 #wishlist-wrapper select {
   margin-bottom: 0;
 }
+
+.wishlist-go-to-cart{
+  display: block;
+  text-transform: uppercase;
+}
