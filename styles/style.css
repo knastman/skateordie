@@ -31,6 +31,7 @@ img {
 
 #logo {
   font-weight: 700;
+  font-size: 18px;
 }
 
 /* #hero {
@@ -39,7 +40,22 @@ img {
 
 #main-header{
   display:flex;
+  justify-content: space-between;
+  align-items: center;
 }
+
+.search-field {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#search-input {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 
 /**** TYPOGRAPY ****/
 
@@ -54,11 +70,26 @@ p:nth-last-child(1){
   margin-bottom:0;
 }
 
-
 #main-footer{
-  margin-top: 50px;
+  margin-top: 70px;
   background-color: rgb(250 237 188);
   padding:10px;
+  height: 400px;
+}
+
+#main-footer-index {
+  background-color: rgb(250 237 188);
+  height: 400px;
+  padding:10px;
+}
+
+#skate-or-die-footer {
+  height: 315px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 165px;
+  font-weight: 700;
 }
 
 /********************* MEDIA QUERIES ************* MEDIA QUERIES *************/

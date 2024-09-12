@@ -1,7 +1,6 @@
 /* product news FRONTPAGE*/
 
 .slideshow-container {
-  max-width: 1300px;
   position: relative;
   margin: auto;
 }
@@ -38,6 +37,10 @@
 
 .prev:hover, .next:hover {
   background-color: rgba(0,0,0,0.6);
+}
+
+#hero {
+  background-color: rgb(250 237 188);
 }
 
 #hero h2{
