@@ -115,7 +115,7 @@ export function listAllProducts() {
 }
 listAllProducts();
 
-function copyUrl(productId) {
+ function copyUrl(productId) {
     const productUrl = `${window.location.origin}/produktsida.html?id=${productId}`;
     
     navigator.clipboard.writeText(productUrl).then(() => {
