@@ -6,9 +6,11 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link href="styles/style.css" rel="stylesheet" />
   <link href="styles/searchProduct.css" rel="stylesheet" />
+  <link rel="stylesheet" href="styles/wishlist-panel.css">
   <script type="module" src="js/script.js"></script>
   <script type="module" src="js/filterProducts.js"></script>
-
+  <script type="module" src="js/wishlist-panel.js"></script>
+  <script type="module" src="js/wishlist-display.js"></script>
    <!--Google fonts-->
    <link rel="preconnect" href="https://fonts.googleapis.com" />
    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -24,7 +26,7 @@
   
   <header id="main-header">
     <!-- Main header -->
-    <div id="logo"><a href="./">LOGO</a></div>
+    <div id="logo"><a href="./">SKATE OR DIE</a></div>
 
     <nav class="product-navigation">
       <ul id="main-level">
@@ -36,7 +38,20 @@
       <input type="text" id="search-input" placeholder="Search product">
       <button id="searchButton"><i class="fa-solid fa-magnifying-glass fa-lg"></i></button>
     </form>
+    <div class="wishlist-icon-header">Wishlist <i class="fa-solid fa-heart"></i></div>
     <a href="./basket.html">CART</a>
+
+    <!--wishlist-panel-->
+    <div id="wishlist-panel">
+      <div id="wishlist-panel-header">
+        <div class="wishlist-header-heart">
+            <i class="fa-solid fa-heart"></i>
+            <h3>WISHLIST</h3>
+          </div>
+          <button id="close-wishlist-panel">X</button>
+      </div>
+      <div id="wishlist-wrapper"></div> <!-- Här kommer produkterna visas -->
+    </div>
 
   </header>
   <main>
