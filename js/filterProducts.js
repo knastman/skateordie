@@ -97,4 +97,11 @@ if (window.location.href.includes('/searchProduct.html')) {
   }
 }
 
+export function copyUrl(productId) {
+  const productUrl = `${window.location.origin}/produktsida.html?id=${productId}`;
+  
+  navigator.clipboard.writeText(productUrl).then(() => {
+      alert("Link successfully copied!");
+  })
+}
 
