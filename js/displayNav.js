@@ -55,8 +55,6 @@ export function displayCategories() {
           console.log(subcatL3.id)
           localStorage.setItem('CategoryId', subcatL3.id)
           window.location.href = `${window.location.origin}/produktkort.html`;
-          console.log('window.location.origin');
-          console.log(window.location.origin);
 
         })
       }
