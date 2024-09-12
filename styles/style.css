@@ -4,6 +4,11 @@
 
 @import "slider.css";
 @import "nav.css";
+@import "produktkort.css";
+@import "produktsida.css";
+@import "basket.css";
+@import "wishlist-panel.css";
+@import "contact-page.css";
 
 :root {
   --mainFont:"Open Sans", system-ui, sans-serif;
@@ -57,6 +62,13 @@ img {
 }
 
 
+main{
+  margin-bottom:80px;
+}
+#index-main{
+  margin:0;
+}
+
 /**** TYPOGRAPY ****/
 
 h1, h2, h3, h4, h5, h6 {
@@ -70,26 +82,80 @@ p:nth-last-child(1){
   margin-bottom:0;
 }
 
+
+
+
+/***********************
+      Footer
+************************/
 #main-footer{
-  margin-top: 70px;
+  /* margin-top: 70px; */
   background-color: rgb(250 237 188);
   padding:10px;
   height: 400px;
 }
 
-#main-footer-index {
+/* #main-footer-index {
   background-color: rgb(250 237 188);
   height: 400px;
   padding:10px;
+} */
+
+.footer-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  text-transform: uppercase;
+  margin-top:50px;
 }
+
+.footer-p1{
+  font-weight: 600;
+}
+/* .footer-p2{
+  background-color:rgb(61, 61, 61);
+}
+.footer-p3{
+  background-color: aqua;
+}
+.footer-p4{
+  background-color:blueviolet;
+} */
+
+.footer-grid ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+.footer-grid ul li a{
+  height:25px;
+}
+.footer-grid ul li a:hover{
+  color:#aaaaaa;
+
+}
+
 
 #skate-or-die-footer {
-  height: 315px;
+  /* height: 315px; */
   display: flex;
   justify-content: center;
   align-items: center;
   font-size: 165px;
+  /* font-size: 12em; */
   font-weight: 700;
+  line-height: 0.8em;
+  padding:50px;
+}
+
+.admin-panel{
+  background-color:#000;
+  color:#fff;
+  padding:0.2em;
+  padding-right:20px;
+  text-align: right;
+}
+.admin-panel a{
+  color:#fff;
 }
 
 /********************* MEDIA QUERIES ************* MEDIA QUERIES *************/

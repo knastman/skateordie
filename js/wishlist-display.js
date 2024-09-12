@@ -40,7 +40,7 @@ export function displayWishlist() {
                         <option value="onesize">ONESIZE</option>
                     </select>
                     <div class="wishlist-add-basket" id="${productData.id}">
-                      <button class="add-to-cart">Add to Cart</button>
+                      <button class="add-to-cart wishlist-cart-button">Add to Cart</button>
                     </div>
                 </div>
                 </div>

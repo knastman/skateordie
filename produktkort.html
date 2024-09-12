@@ -5,9 +5,6 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link href="styles/style.css" rel="stylesheet" />
-  <link href="./styles/produktkort.css" rel="stylesheet">
-  <link href="./styles/produktkort.css" rel="stylesheet">
-  <link href="styles/wishlist-panel.css"  rel="stylesheet" >
   <script type="module" src="js/script.js"></script>
   <script type="module" src="js/productListing.js"></script>
   <script type="module" src="js/wishlist-panel.js"></script>
@@ -21,12 +18,11 @@
   <link rel="stylesheet"
     href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
   <script src="https://kit.fontawesome.com/9605ade1b0.js" crossorigin="anonymous"></script>
-  <title>Skate or Die</title>
+  <title>Produkter - Skate or Die</title>
 </head>
 
 <body>
   <header id="main-header">
-    <!-- Main header -->
     <div id="logo"><a href="./">SKATE OR DIE</a></div>
 
     <nav class="product-navigation">
@@ -52,29 +48,50 @@
       </div>
       <div id="wishlist-wrapper"></div> <!-- Här kommer produkterna visas -->
     </div>
-
-    <!-- <nav class="main-navigation">
-      <ul>
-        <li><a href="#">Home</a></li>
-        <li><a href="#">About</a></li>
-        <li><a href="#">Contact</a></li>
-      </ul>
-    </nav>  -->
   </header>
-  <div id="hero">
-    <!-- Herosection -->
-  </div>
   <main>
     <div id="productList">
     </div>
-    <!-- Main content -->
-    <img src="/images/" alt="" />
+
   </main>
+  
   <footer id="main-footer">
     <!-- Main footer -->
-    <a href="./admin/admin.html">Admin</a>
-    <a href="./contact-page.html"> Contact us</a>
+    <div class="footer-grid">
+      <div class="footer-p1"> 
+        skateordie.com
+      </div>
+      <div class="footer-p2"> 
+        <ul>
+          <li><a href="./contact-page.html">Contact us</a></li>
+          <li><a href="#">About</a></li>
+          <li><a href="#">Careers</a></li>
+          <li><a href="#">Sustainability</a></li>
+        </ul>
+      </div>
+      <div class="footer-p3"> 
+        <ul>
+          <li><a href="./contact-page.html">FAQ</a></li>
+          <li><a href="#">Our policies</a></li>
+          <li><a href="#">Change Cookie Settings</a></li>
+        </ul>
+      </div>
+      <div class="footer-p4"> 
+        <ul>
+          <li><a href="./contact-page.html">Tik Tok</a></li>
+          <li><a href="#">Instagram</a></li>
+          <li><a href="#">Youtube</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div id="skate-or-die-footer">
+      SKATE OR DIE
+    </div>
   </footer>
+  <div class="admin-panel">
+    <a href="./admin/admin.html">Admin</a>
+  </div>
 </body>
 
 </html>
