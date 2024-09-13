@@ -9,6 +9,12 @@ export function displayWishlist() {
     const wishlistWrapper = document.getElementById('wishlist-wrapper');
     wishlistWrapper.innerHTML = '';
 
+    const goToCartWrap = document.createElement('div');
+    const goToCart = document.createElement('a');
+    goToCartWrap.setAttribute("class", 'wishlist-go-to-cart');
+    goToCart.href = './basket.html';
+    goToCart.innerHTML = "Go to Cart"
+
     const wishlistProducts = wishlist.get();
     console.log('Wishlist products:', wishlistProducts);
 
@@ -53,4 +59,6 @@ export function displayWishlist() {
             });
         }
     });
+    wishlistWrapper.appendChild(goToCartWrap);
+    goToCartWrap.appendChild(goToCart);
 }
