@@ -97,7 +97,8 @@ export function listAllProducts() {
             // CHOOSING A PRODUCT AND BEING SENT TO THE PRODUCTPAGE
             productCard.addEventListener('click', (event) => {
                 if (event.target == productCardImg) {
-                    window.location.href = `${window.location.origin}/produktsida.html?id=${product.id}`;
+                    // window.location.href = `${window.location.origin}/produktsida.html?id=${product.id}`;
+                    window.location.href = `./produktsida.html?id=${product.id}`;
                 }
                 if (event.target.closest(".wishlist-icon")) {
                     const itemIsInWishlist = wishlist.toggle(product.id);
